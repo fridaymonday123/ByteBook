@@ -16,7 +16,7 @@
 
 This is the source code that runs [**RidingCat**](https://www.ridingcat.com) and all the associated services. If you want to use RidingCat then you don't need to run this code, we offer a hosted version of the app at [ridingcat.com](https://www.ridingcat.com). You can also find documentation on using RidingCat in [our guide](https://docs.ridingcat.com/s/guide).
 
-If you'd like to run your own copy of Outline or contribute to development then this is the place for you.
+If you'd like to run your own copy of RidingCat or contribute to development then this is the place for you.
 
 # Installation
 
