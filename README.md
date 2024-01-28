@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/31465/34380645-bd67f474-eb0b-11e7-8d03-0151c1730654.png" height="29" />
+  <img src="/images/ridingcat.jpg" height="89" />
 </p>
 <p align="center">
   <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out RidingCat using our hosted version at <a href="https://www.ridingcat.com">www.ridingcat.com</a>.</i>
