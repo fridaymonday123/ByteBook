@@ -20,7 +20,7 @@ If you'd like to run your own copy of Outline or contribute to development then 
 
 # Installation
 
-Please see the [documentation](https://docs.getoutline.com/s/hosting/) for running your own copy of Outline in a production configuration.
+Please see the [documentation](https://docs.getoutline.com/s/hosting/) for running your own copy of RidingCat in a production configuration.
 
 If you have questions or improvements for the docs please create a thread in [GitHub discussions](https://github.com/outline/outline/discussions).
 
