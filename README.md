@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/images/ridingcat.jpg" height="89" />
+  <img src="/images/ridingcat.jpg" height="109" />
 </p>
 <p align="center">
   <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out RidingCat using our hosted version at <a href="https://www.ridingcat.com">www.ridingcat.com</a>.</i>
