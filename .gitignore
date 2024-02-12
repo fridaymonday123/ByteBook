@@ -1,0 +1,14 @@
+dist
+build
+node_modules/*
+.env
+.log
+.vscode/*
+npm-debug.log
+stats.json
+.DS_Store
+data/*
+.idea
+*.pem
+*.key
+*.cert
