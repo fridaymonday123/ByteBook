@@ -133,8 +133,8 @@ describe("#parseDomain", () => {
   });
 
   it("should work with localhost", () => {
-    env.URL = "http://localhost:80";
-    expect(parseDomain("https://localhost:80/foo/bar?q=12345")).toMatchObject(
+    env.URL = "http://localhost:3000";
+    expect(parseDomain("https://localhost:3000/foo/bar?q=12345")).toMatchObject(
       {
         teamSubdomain: "",
         host: "localhost",
@@ -144,13 +144,13 @@ describe("#parseDomain", () => {
   });
 
   it("should work with localhost subdomains", () => {
-    env.URL = "http://localhost:80";
-    expect(parseDomain("https://www.localhost:80")).toMatchObject({
+    env.URL = "http://localhost:3000";
+    expect(parseDomain("https://www.localhost:3000")).toMatchObject({
       teamSubdomain: "",
       host: "www.localhost",
       custom: false,
     });
-    expect(parseDomain("https://myteam.localhost:80")).toMatchObject({
+    expect(parseDomain("https://myteam.localhost:3000")).toMatchObject({
       teamSubdomain: "myteam",
       host: "myteam.localhost",
       custom: false,
@@ -174,7 +174,7 @@ describe("#getCookieDomain", () => {
   it("returns the normalized app host when on the host domain", () => {
     expect(getCookieDomain("subdomain.example.com", true)).toBe("example.com");
     expect(getCookieDomain("www.example.com", true)).toBe("example.com");
-    expect(getCookieDomain("http://example.com:80", true)).toBe(
+    expect(getCookieDomain("http://example.com:3000", true)).toBe(
       "example.com"
     );
     expect(
