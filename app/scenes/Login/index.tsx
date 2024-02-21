@@ -15,7 +15,7 @@ import ChangeLanguage from "~/components/ChangeLanguage";
 import Fade from "~/components/Fade";
 import Flex from "~/components/Flex";
 import Heading from "~/components/Heading";
-import RidingCatIcon100 from "~/components/Icons/RidingCatIcon100";
+import RidingCat100Icon from "~/components/Icons/RidingCat100Icon";
 import Input from "~/components/Input";
 import LoadingIndicator from "~/components/LoadingIndicator";
 import PageTitle from "~/components/PageTitle";
@@ -33,6 +33,7 @@ import { detectLanguage } from "~/utils/language";
 import AuthenticationProvider from "./components/AuthenticationProvider";
 import BackButton from "./components/BackButton";
 import Notices from "./components/Notices";
+import { getRedirectUrl } from "./getRedirectUrl";
 
 type Props = {
   children?: (config?: Config) => React.ReactNode;
@@ -227,6 +228,16 @@ function Login({ children }: Props) {
     );
   }
 
+  // If there is only one provider and it's OIDC, redirect immediately.
+  if (
+    config.providers.length === 1 &&
+    config.providers[0].id === "oidc" &&
+    !env.OIDC_DISABLE_REDIRECT
+  ) {
+    window.location.href = getRedirectUrl(config.providers[0].authUrl);
+    return null;
+  }
+
   return (
     <Background>
       <BackButton config={config} />
@@ -240,7 +251,7 @@ function Login({ children }: Props) {
           {config.logo && !isCreate ? (
             <TeamLogo size={100} src={config.logo} />
           ) : (
-            <RidingCatIcon100 size={100} />
+                 <RidingCat100Icon size={100} />
           )}
         </Logo>
         {isCreate ? (
@@ -257,7 +268,7 @@ function Login({ children }: Props) {
         ) : (
           <>
             <StyledHeading as="h2" centered>
-              {t("Login 2 to {{ authProviderName }}", {
+              {t("Login to {{ authProviderName }}", {
                 authProviderName: config.name || env.APP_NAME,
               })}
             </StyledHeading>

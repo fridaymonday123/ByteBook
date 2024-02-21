@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\scenes",
+    "\\app\\scenes\\Login",
+    "\\server\\utils",
+    "\\server\\__mocks__"
+  ],
+  "SelectedNode": "\\app\\scenes\\Login\\index.tsx",
+  "PreviewInSolutionExplorer": false
+}

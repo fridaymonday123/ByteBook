@@ -36,8 +36,7 @@ export async function checkDataMigrations() {
   const teams = await Team.count();
   const providers = await AuthenticationProvider.count();
 
-/**
-  if (env.isProduction && teams && !providers) {
+/*  if (env.isProduction && teams && !providers) {
     Logger.warn(`
 This version of Outline cannot start until a data migration is complete.
 Backup your database, run the database migrations and the following script:
@@ -46,8 +45,7 @@ Backup your database, run the database migrations and the following script:
 $ node ./build/server/scripts/20210226232041-migrate-authentication.js
 `);
     process.exit(1);
-  }
-**/
+  }*/
 }
 
 export async function checkEnv() {

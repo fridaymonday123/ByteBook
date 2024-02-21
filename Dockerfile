@@ -26,7 +26,7 @@ RUN addgroup -g 1001 -S nodejs && \
   adduser -S nodejs -u 1001 && \
   chown -R nodejs:nodejs $APP_PATH/build && \
   mkdir -p /var/lib/outline && \
-	chown -R nodejs:nodejs /var/lib/outline
+	chown -R nodejs:nodejs /var/lib/ridingcat
 
 ENV FILE_STORAGE_LOCAL_ROOT_DIR /var/lib/ridingcat/data
 RUN mkdir -p "$FILE_STORAGE_LOCAL_ROOT_DIR" && \
