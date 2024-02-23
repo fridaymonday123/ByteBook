@@ -10,6 +10,7 @@ export enum AvatarSize {
   Large = 32,
   XLarge = 48,
   XXLarge = 64,
+  XXXLarge = 100,
 }
 
 export interface IAvatar {
