@@ -25,15 +25,15 @@ COPY --from=base $APP_PATH/package.json ./package.json
 RUN addgroup -g 1001 -S nodejs && \
   adduser -S nodejs -u 1001 && \
   chown -R nodejs:nodejs $APP_PATH/build && \
-  mkdir -p /var/lib/outline && \
-	chown -R nodejs:nodejs /var/lib/ridingcat
+  mkdir -p /var/lib/richbook && \
+	chown -R nodejs:nodejs /var/lib/richbook
 
-ENV FILE_STORAGE_LOCAL_ROOT_DIR /var/lib/ridingcat/data
+ENV FILE_STORAGE_LOCAL_ROOT_DIR /var/lib/richbook/data
 RUN mkdir -p "$FILE_STORAGE_LOCAL_ROOT_DIR" && \
   chown -R nodejs:nodejs "$FILE_STORAGE_LOCAL_ROOT_DIR" && \
   chmod 1777 "$FILE_STORAGE_LOCAL_ROOT_DIR"
 
-VOLUME /var/lib/outline/data
+VOLUME /var/lib/richbook/data
 
 USER nodejs
 
