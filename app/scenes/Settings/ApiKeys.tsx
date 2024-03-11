@@ -51,7 +51,7 @@ function ApiKeys() {
           components={{
             em: (
               <a
-                href="https://www.getoutline.com/developers"
+                href="https://www.richbook.ai/developers"
                 target="_blank"
                 rel="noreferrer"
               />

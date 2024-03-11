@@ -1,5 +1,6 @@
 import crypto from "crypto";
-import { addHours, addMinutes, subMinutes } from "date-fns";
+//import { addHours, addMinutes, subMinutes } from "date-fns";
+import { addYears, addHours, addMinutes, subMinutes } from "date-fns";
 import JWT from "jsonwebtoken";
 import { Context } from "koa";
 import {
@@ -518,6 +519,7 @@ class User extends ParanoidModel<
       {
         id: this.id,
         createdAt: new Date().toISOString(),
+        expiresAt: addYears(new Date(), 1).toISOString(),
         type: "email-signin",
       },
       this.jwtSecret

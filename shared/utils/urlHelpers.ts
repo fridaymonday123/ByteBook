@@ -25,27 +25,27 @@ export function slackAuth(
 }
 
 export function githubUrl(): string {
-  return "https://www.github.com/outline";
+  return "https://www.github.com/fridaymonday123";
 }
 
 export function githubIssuesUrl(): string {
-  return "https://www.github.com/outline/outline/issues";
+  return "https://www.github.com/fridaymonday123/RichBook/issues";
 }
 
 export function twitterUrl(): string {
-  return "https://twitter.com/getoutline";
+  return "https://twitter.com/richbook";
 }
 
 export function feedbackUrl(): string {
-  return "https://www.getoutline.com/contact";
+  return "https://www.richbook.ai/contact";
 }
 
 export function developersUrl(): string {
-  return "https://www.getoutline.com/developers";
+  return "https://www.richbook.ai/developers";
 }
 
 export function changelogUrl(): string {
-  return "https://www.getoutline.com/changelog";
+  return "https://www.richbook.ai/changelog";
 }
 
 export const SLUG_URL_REGEX = /^(?:[0-9a-zA-Z-_~]*-)?([a-zA-Z0-9]{10,15})$/;

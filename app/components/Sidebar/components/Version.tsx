@@ -12,7 +12,7 @@ export default function Version() {
   React.useEffect(() => {
     async function loadReleases() {
       const res = await fetch(
-        "https://api.github.com/repos/outline/outline/releases"
+        "https://api.github.com/repos/fridaymonday123/RichBook/releases"
       );
       const releases = await res.json();
 
@@ -42,7 +42,7 @@ export default function Version() {
   return (
     <SidebarLink
       target="_blank"
-      href="https://github.com/outline/outline/releases"
+      href="https://github.com/fridaymonday123/RichBook/releases"
       label={
         <>
           v{version}

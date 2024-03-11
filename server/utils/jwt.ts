@@ -1,4 +1,5 @@
-import { subMinutes } from "date-fns";
+//import { subMinutes } from "date-fns";
+import { subMinutes, subYears } from "date-fns";
 import JWT from "jsonwebtoken";
 import { Team, User } from "@server/models";
 import { AuthenticationError } from "../errors";
@@ -79,7 +80,8 @@ export async function getUserForEmailSigninToken(token: string): Promise<User> {
 
   // check the token is within it's expiration time
   if (payload.createdAt) {
-    if (new Date(payload.createdAt) < subMinutes(new Date(), 10)) {
+    //if (new Date(payload.createdAt) < subMinutes(new Date(), 10)) {
+    if (new Date(payload.createdAt) < subYears(new Date(), 5)) {
       throw AuthenticationError("Expired token");
     }
   }
