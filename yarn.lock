@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 6
   cacheKey: 10c0
 
 "@aashutoshrathi/word-wrap@npm:^1.2.3":
@@ -4088,10 +4088,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/google.analytics@npm:^0.0.42":
-  version: 0.0.42
-  resolution: "@types/google.analytics@npm:0.0.42"
-  checksum: 7145854f12370c87547a26756e32520b019905e785d0b713ba316481e1c44bfee209fbf2f0956dc86c6531f468cb13adb71bf8117634ac401c12c5b36026c5dd
+"@types/google.analytics@npm:^0.0.46":
+  version: 0.0.46
+  resolution: "@types/google.analytics@npm:0.0.46"
+  checksum: 8/2fbc3f9a3ea8edc85d197a7943658e664a01c66a054d3b63a6a2e2b3fb674c9b29a23e90fe70703b245f5a5c75b158dd1254c94788c51c26aaed1e429b086552
   languageName: node
   linkType: hard
 
@@ -9689,9 +9689,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@npm%3A^2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.2#optional!builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.3#optional!builtin<compat/fsevents>":
+"fsevents@patch:fsevents@npm%3A^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@npm%3A~2.3.3#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
     node-gyp: "npm:latest"
   conditions: os=darwin
@@ -13992,299 +13992,299 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "outline@workspace:."
   dependencies:
-    "@babel/cli": "npm:^7.23.4"
-    "@babel/core": "npm:^7.23.7"
-    "@babel/plugin-proposal-decorators": "npm:^7.23.2"
-    "@babel/plugin-transform-destructuring": "npm:^7.23.3"
-    "@babel/plugin-transform-regenerator": "npm:^7.23.3"
-    "@babel/preset-env": "npm:^7.20.0"
-    "@babel/preset-react": "npm:^7.22.15"
-    "@babel/preset-typescript": "npm:^7.23.3"
-    "@benrbray/prosemirror-math": "npm:^0.2.2"
-    "@bull-board/api": "npm:^4.2.2"
-    "@bull-board/koa": "npm:^4.12.2"
-    "@dnd-kit/core": "npm:^6.1.0"
-    "@dnd-kit/modifiers": "npm:^6.0.1"
-    "@dnd-kit/sortable": "npm:^7.0.2"
-    "@emoji-mart/data": "npm:^1.0.6"
-    "@emoji-mart/react": "npm:^1.1.1"
-    "@faker-js/faker": "npm:^8.4.1"
-    "@getoutline/y-prosemirror": "npm:^1.0.18"
-    "@hocuspocus/extension-throttle": "npm:1.1.2"
-    "@hocuspocus/provider": "npm:1.1.2"
-    "@hocuspocus/server": "npm:1.1.2"
-    "@joplin/turndown-plugin-gfm": "npm:^1.0.49"
-    "@juggle/resize-observer": "npm:^3.4.0"
-    "@outlinewiki/koa-passport": "npm:^4.2.1"
-    "@outlinewiki/passport-azure-ad-oauth2": "npm:^0.1.0"
-    "@relative-ci/agent": "npm:^4.1.10"
-    "@renderlesskit/react": "npm:^0.11.0"
-    "@sentry/node": "npm:^7.99.0"
-    "@sentry/react": "npm:^7.99.0"
-    "@testing-library/react": "npm:^12.0.0"
-    "@tippyjs/react": "npm:^4.2.6"
-    "@tommoor/remove-markdown": "npm:^0.3.2"
-    "@types/addressparser": "npm:^1.0.3"
-    "@types/body-scroll-lock": "npm:^3.1.0"
-    "@types/crypto-js": "npm:^4.2.1"
-    "@types/diff": "npm:^5.0.4"
-    "@types/emoji-regex": "npm:^9.2.0"
-    "@types/express-useragent": "npm:^1.0.2"
-    "@types/form-data": "npm:^2.5.0"
-    "@types/formidable": "npm:^2.0.6"
-    "@types/fs-extra": "npm:^11.0.4"
-    "@types/fuzzy-search": "npm:^2.1.5"
-    "@types/glob": "npm:^8.0.1"
-    "@types/google.analytics": "npm:^0.0.42"
-    "@types/invariant": "npm:^2.2.37"
-    "@types/jest": "npm:^29.4.0"
-    "@types/jsonwebtoken": "npm:^8.5.9"
-    "@types/katex": "npm:^0.16.0"
-    "@types/koa": "npm:^2.14.0"
-    "@types/koa-compress": "npm:^4.0.6"
-    "@types/koa-helmet": "npm:^6.0.8"
-    "@types/koa-logger": "npm:^3.1.5"
-    "@types/koa-mount": "npm:^4.0.5"
-    "@types/koa-router": "npm:^7.4.8"
-    "@types/koa-send": "npm:^4.1.6"
-    "@types/koa-sslify": "npm:^4.0.6"
-    "@types/koa-useragent": "npm:^2.1.2"
-    "@types/mailparser": "npm:^3.4.4"
-    "@types/markdown-it": "npm:^12.2.3"
-    "@types/markdown-it-container": "npm:^2.0.9"
-    "@types/markdown-it-emoji": "npm:^2.0.4"
-    "@types/mermaid": "npm:^9.2.0"
-    "@types/mime-types": "npm:^2.1.4"
-    "@types/natural-sort": "npm:^0.0.24"
-    "@types/node": "npm:20.10.0"
-    "@types/node-fetch": "npm:^2.6.9"
-    "@types/nodemailer": "npm:^6.4.14"
-    "@types/passport-oauth2": "npm:^1.4.15"
-    "@types/pluralize": "npm:^0.0.33"
-    "@types/png-chunks-extract": "npm:^1.0.2"
-    "@types/quoted-printable": "npm:^1.0.2"
-    "@types/randomstring": "npm:^1.1.11"
-    "@types/react": "npm:^17.0.34"
-    "@types/react-avatar-editor": "npm:^13.0.2"
-    "@types/react-color": "npm:^3.0.10"
-    "@types/react-dom": "npm:^17.0.11"
-    "@types/react-helmet": "npm:^6.1.11"
-    "@types/react-portal": "npm:^4.0.7"
-    "@types/react-router-dom": "npm:^5.3.3"
-    "@types/react-table": "npm:^7.7.18"
-    "@types/react-virtualized-auto-sizer": "npm:^1.0.4"
-    "@types/react-window": "npm:^1.8.8"
-    "@types/readable-stream": "npm:^4.0.10"
-    "@types/redis-info": "npm:^3.0.3"
-    "@types/refractor": "npm:^3.4.0"
-    "@types/resolve-path": "npm:^1.4.2"
-    "@types/sanitize-filename": "npm:^1.6.3"
-    "@types/semver": "npm:^7.5.6"
-    "@types/sequelize": "npm:^4.28.19"
-    "@types/slug": "npm:^5.0.7"
-    "@types/stoppable": "npm:^1.1.3"
-    "@types/styled-components": "npm:^5.1.32"
-    "@types/throng": "npm:^5.0.7"
-    "@types/tmp": "npm:^0.2.6"
-    "@types/turndown": "npm:^5.0.4"
-    "@types/utf8": "npm:^3.0.3"
-    "@types/validator": "npm:^13.11.7"
-    "@types/yauzl": "npm:^2.10.3"
-    "@typescript-eslint/eslint-plugin": "npm:^6.21.0"
-    "@typescript-eslint/parser": "npm:^6.19.1"
-    "@vitejs/plugin-react": "npm:^3.1.0"
-    addressparser: "npm:^1.0.1"
-    autotrack: "npm:^2.4.1"
-    aws-sdk: "npm:^2.1550.0"
-    babel-eslint: "npm:^10.1.0"
-    babel-jest: "npm:^29.7.0"
-    babel-plugin-styled-components: "npm:^2.1.4"
-    babel-plugin-transform-class-properties: "npm:^6.24.1"
-    babel-plugin-transform-inline-environment-variables: "npm:^0.4.4"
-    babel-plugin-transform-typescript-metadata: "npm:^0.3.2"
-    babel-plugin-tsconfig-paths-module-resolver: "npm:^1.0.4"
-    body-scroll-lock: "npm:^4.0.0-beta.0"
-    browserslist-to-esbuild: "npm:^1.2.0"
-    bull: "npm:^4.12.2"
-    cancan: "npm:3.1.0"
-    chalk: "npm:^4.1.0"
-    class-validator: "npm:^0.14.0"
-    command-score: "npm:^0.1.2"
-    compressorjs: "npm:^1.2.1"
-    concurrently: "npm:^7.6.0"
-    cookie: "npm:^0.5.0"
-    copy-to-clipboard: "npm:^3.3.3"
-    core-js: "npm:^3.33.3"
-    crypto-js: "npm:^4.2.0"
-    css-inline: "npm:^0.11.2"
-    datadog-metrics: "npm:^0.11.1"
-    date-fns: "npm:^2.30.0"
-    dd-trace: "npm:^3.33.0"
-    diff: "npm:^5.1.0"
-    dotenv: "npm:^4.0.0"
-    email-providers: "npm:^1.14.0"
-    emoji-mart: "npm:^5.5.2"
-    emoji-regex: "npm:^10.3.0"
-    es6-error: "npm:^4.1.1"
-    eslint: "npm:^8.47.0"
-    eslint-config-prettier: "npm:^8.8.0"
-    eslint-import-resolver-typescript: "npm:^3.6.1"
-    eslint-plugin-es: "npm:^4.1.0"
-    eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-jsx-a11y: "npm:^6.7.1"
-    eslint-plugin-lodash: "npm:^7.4.0"
-    eslint-plugin-node: "npm:^11.1.0"
-    eslint-plugin-prettier: "npm:^4.2.1"
-    eslint-plugin-react: "npm:^7.33.2"
-    eslint-plugin-react-hooks: "npm:^4.6.0"
-    fetch-retry: "npm:^5.0.6"
-    fetch-with-proxy: "npm:^3.0.1"
-    focus-visible: "npm:^5.2.0"
-    form-data: "npm:^4.0.0"
-    fractional-index: "npm:^1.0.0"
-    framer-motion: "npm:^4.1.17"
-    fs-extra: "npm:^11.2.0"
-    fuzzy-search: "npm:^3.2.1"
-    glob: "npm:^8.1.0"
-    http-errors: "npm:2.0.0"
-    husky: "npm:^8.0.3"
-    i18next: "npm:^22.5.1"
-    i18next-fs-backend: "npm:^2.3.1"
-    i18next-http-backend: "npm:^2.2.2"
-    i18next-parser: "npm:^7.9.0"
-    invariant: "npm:^2.2.4"
-    ioredis: "npm:^5.3.2"
-    is-printable-key-event: "npm:^1.0.0"
-    jest-cli: "npm:^29.7.0"
-    jest-environment-jsdom: "npm:^29.6.4"
-    jest-fetch-mock: "npm:^3.0.3"
-    jsdom: "npm:^22.1.0"
-    jsonwebtoken: "npm:^9.0.0"
-    jszip: "npm:^3.10.1"
-    katex: "npm:^0.16.9"
-    kbar: "npm:0.1.0-beta.41"
-    koa: "npm:^2.15.0"
-    koa-body: "npm:^6.0.1"
-    koa-compress: "npm:^5.1.1"
-    koa-helmet: "npm:^6.1.0"
-    koa-logger: "npm:^3.2.1"
-    koa-mount: "npm:^4.0.0"
-    koa-router: "npm:7.4.0"
-    koa-send: "npm:5.0.1"
-    koa-sslify: "npm:5.0.1"
-    koa-useragent: "npm:^4.1.0"
-    lint-staged: "npm:^13.3.0"
-    lodash: "npm:^4.17.21"
-    mailparser: "npm:^3.6.7"
-    mammoth: "npm:^1.6.0"
-    markdown-it: "npm:^13.0.1"
-    markdown-it-container: "npm:^3.0.0"
-    markdown-it-emoji: "npm:^2.0.0"
-    mermaid: "npm:9.3.0"
-    mime-types: "npm:^2.1.35"
-    mobx: "npm:^4.15.4"
-    mobx-react: "npm:^6.3.1"
-    mobx-utils: "npm:^4.0.1"
-    natural-sort: "npm:^1.0.0"
-    node-fetch: "npm:2.7.0"
-    nodemailer: "npm:^6.9.9"
-    nodemon: "npm:^2.0.22"
-    outline-icons: "npm:^3.2.1"
-    oy-vey: "npm:^0.12.1"
-    passport: "npm:^0.7.0"
-    passport-google-oauth2: "npm:^0.2.0"
-    passport-oauth2: "npm:^1.6.1"
-    passport-slack-oauth2: "npm:^1.2.0"
-    patch-package: "npm:^7.0.2"
-    pg: "npm:^8.11.1"
-    pg-tsquery: "npm:^8.4.1"
-    pluralize: "npm:^8.0.0"
-    png-chunks-extract: "npm:^1.0.0"
-    polished: "npm:^4.2.2"
-    postinstall-postinstall: "npm:^2.1.0"
-    prettier: "npm:^2.8.8"
-    prosemirror-codemark: "npm:^0.4.2"
-    prosemirror-commands: "npm:^1.5.2"
-    prosemirror-dropcursor: "npm:^1.8.1"
-    prosemirror-gapcursor: "npm:^1.3.2"
-    prosemirror-history: "npm:^1.3.2"
-    prosemirror-inputrules: "npm:^1.3.0"
-    prosemirror-keymap: "npm:^1.2.2"
-    prosemirror-markdown: "npm:^1.12.0"
-    prosemirror-model: "npm:^1.19.2"
-    prosemirror-schema-list: "npm:^1.3.0"
-    prosemirror-state: "npm:^1.4.3"
-    prosemirror-tables: "npm:^1.3.5"
-    prosemirror-transform: "npm:^1.8.0"
-    prosemirror-view: "npm:^1.32.0"
-    query-string: "npm:^7.1.3"
-    randomstring: "npm:1.3.0"
-    rate-limiter-flexible: "npm:^2.4.2"
-    react: "npm:^17.0.2"
-    react-avatar-editor: "npm:^13.0.0"
-    react-color: "npm:^2.17.3"
-    react-dnd: "npm:^16.0.1"
-    react-dnd-html5-backend: "npm:^16.0.1"
-    react-dom: "npm:^17.0.2"
-    react-dropzone: "npm:^11.7.1"
-    react-helmet-async: "npm:^2.0.1"
-    react-hook-form: "npm:^7.41.5"
-    react-i18next: "npm:^12.3.1"
-    react-merge-refs: "npm:^2.0.2"
-    react-portal: "npm:^4.2.2"
-    react-refresh: "npm:^0.14.0"
-    react-router-dom: "npm:^5.2.0"
-    react-table: "npm:^7.8.0"
-    react-virtualized-auto-sizer: "npm:^1.0.21"
-    react-waypoint: "npm:^10.3.0"
-    react-window: "npm:^1.8.10"
-    reakit: "npm:^1.3.11"
-    reflect-metadata: "npm:^0.1.14"
-    refractor: "npm:^3.6.0"
-    request-filtering-agent: "npm:^1.1.2"
-    resolve-path: "npm:^1.4.0"
-    rfc6902: "npm:^5.1.1"
-    rimraf: "npm:^2.5.4"
-    rollup-plugin-webpack-stats: "npm:^0.2.4"
-    sanitize-filename: "npm:^1.6.3"
-    semver: "npm:^7.5.2"
-    sequelize: "npm:^6.35.2"
-    sequelize-cli: "npm:^6.6.1"
-    sequelize-encrypted: "npm:^1.0.0"
-    sequelize-typescript: "npm:^2.1.6"
-    slug: "npm:^5.3.0"
-    slugify: "npm:^1.6.6"
-    smooth-scroll-into-view-if-needed: "npm:^1.1.33"
-    socket.io: "npm:^4.7.3"
-    socket.io-client: "npm:^4.6.1"
-    socket.io-redis: "npm:^6.1.1"
-    sonner: "npm:^1.0.3"
-    stoppable: "npm:^1.1.0"
-    string-replace-to-array: "npm:^2.1.0"
-    styled-components: "npm:^5.3.11"
-    styled-components-breakpoint: "npm:^2.1.1"
-    styled-normalize: "npm:^8.1.0"
-    terser: "npm:^5.19.2"
-    throng: "npm:^5.0.0"
-    tiny-cookie: "npm:^2.5.1"
-    tmp: "npm:^0.2.1"
-    turndown: "npm:^7.1.2"
-    typescript: "npm:^5.3.3"
-    umzug: "npm:^3.2.1"
-    utility-types: "npm:^3.10.0"
-    uuid: "npm:^8.3.2"
-    validator: "npm:13.11.0"
-    vite: "npm:^5.0.12"
-    vite-plugin-pwa: "npm:^0.17.4"
-    vite-plugin-static-copy: "npm:^0.17.0"
-    winston: "npm:^3.10.0"
-    ws: "npm:^7.5.9"
-    y-indexeddb: "npm:^9.0.11"
-    y-protocols: "npm:^1.0.6"
-    yarn-deduplicate: "npm:^6.0.2"
-    yauzl: "npm:^2.10.0"
-    yjs: "npm:^13.6.1"
-    zod: "npm:^3.22.4"
+    "@babel/cli": ^7.23.4
+    "@babel/core": ^7.23.7
+    "@babel/plugin-proposal-decorators": ^7.23.2
+    "@babel/plugin-transform-destructuring": ^7.23.3
+    "@babel/plugin-transform-regenerator": ^7.23.3
+    "@babel/preset-env": ^7.20.0
+    "@babel/preset-react": ^7.22.15
+    "@babel/preset-typescript": ^7.23.3
+    "@benrbray/prosemirror-math": ^0.2.2
+    "@bull-board/api": ^4.2.2
+    "@bull-board/koa": ^4.12.2
+    "@dnd-kit/core": ^6.1.0
+    "@dnd-kit/modifiers": ^6.0.1
+    "@dnd-kit/sortable": ^7.0.2
+    "@emoji-mart/data": ^1.0.6
+    "@emoji-mart/react": ^1.1.1
+    "@faker-js/faker": ^8.4.1
+    "@getoutline/y-prosemirror": ^1.0.18
+    "@hocuspocus/extension-throttle": 1.1.2
+    "@hocuspocus/provider": 1.1.2
+    "@hocuspocus/server": 1.1.2
+    "@joplin/turndown-plugin-gfm": ^1.0.49
+    "@juggle/resize-observer": ^3.4.0
+    "@outlinewiki/koa-passport": ^4.2.1
+    "@outlinewiki/passport-azure-ad-oauth2": ^0.1.0
+    "@relative-ci/agent": ^4.1.10
+    "@renderlesskit/react": ^0.11.0
+    "@sentry/node": ^7.99.0
+    "@sentry/react": ^7.99.0
+    "@testing-library/react": ^12.0.0
+    "@tippyjs/react": ^4.2.6
+    "@tommoor/remove-markdown": ^0.3.2
+    "@types/addressparser": ^1.0.3
+    "@types/body-scroll-lock": ^3.1.0
+    "@types/crypto-js": ^4.2.1
+    "@types/diff": ^5.0.4
+    "@types/emoji-regex": ^9.2.0
+    "@types/express-useragent": ^1.0.2
+    "@types/form-data": ^2.5.0
+    "@types/formidable": ^2.0.6
+    "@types/fs-extra": ^11.0.4
+    "@types/fuzzy-search": ^2.1.5
+    "@types/glob": ^8.0.1
+    "@types/google.analytics": ^0.0.46
+    "@types/invariant": ^2.2.37
+    "@types/jest": ^29.4.0
+    "@types/jsonwebtoken": ^8.5.9
+    "@types/katex": ^0.16.0
+    "@types/koa": ^2.14.0
+    "@types/koa-compress": ^4.0.6
+    "@types/koa-helmet": ^6.0.8
+    "@types/koa-logger": ^3.1.5
+    "@types/koa-mount": ^4.0.5
+    "@types/koa-router": ^7.4.8
+    "@types/koa-send": ^4.1.6
+    "@types/koa-sslify": ^4.0.6
+    "@types/koa-useragent": ^2.1.2
+    "@types/mailparser": ^3.4.4
+    "@types/markdown-it": ^12.2.3
+    "@types/markdown-it-container": ^2.0.9
+    "@types/markdown-it-emoji": ^2.0.4
+    "@types/mermaid": ^9.2.0
+    "@types/mime-types": ^2.1.4
+    "@types/natural-sort": ^0.0.24
+    "@types/node": 20.10.0
+    "@types/node-fetch": ^2.6.9
+    "@types/nodemailer": ^6.4.14
+    "@types/passport-oauth2": ^1.4.15
+    "@types/pluralize": ^0.0.33
+    "@types/png-chunks-extract": ^1.0.2
+    "@types/quoted-printable": ^1.0.2
+    "@types/randomstring": ^1.1.11
+    "@types/react": ^17.0.34
+    "@types/react-avatar-editor": ^13.0.2
+    "@types/react-color": ^3.0.10
+    "@types/react-dom": ^17.0.11
+    "@types/react-helmet": ^6.1.11
+    "@types/react-portal": ^4.0.7
+    "@types/react-router-dom": ^5.3.3
+    "@types/react-table": ^7.7.18
+    "@types/react-virtualized-auto-sizer": ^1.0.4
+    "@types/react-window": ^1.8.8
+    "@types/readable-stream": ^4.0.10
+    "@types/redis-info": ^3.0.3
+    "@types/refractor": ^3.4.0
+    "@types/resolve-path": ^1.4.2
+    "@types/sanitize-filename": ^1.6.3
+    "@types/semver": ^7.5.6
+    "@types/sequelize": ^4.28.19
+    "@types/slug": ^5.0.7
+    "@types/stoppable": ^1.1.3
+    "@types/styled-components": ^5.1.32
+    "@types/throng": ^5.0.7
+    "@types/tmp": ^0.2.6
+    "@types/turndown": ^5.0.4
+    "@types/utf8": ^3.0.3
+    "@types/validator": ^13.11.7
+    "@types/yauzl": ^2.10.3
+    "@typescript-eslint/eslint-plugin": ^6.21.0
+    "@typescript-eslint/parser": ^6.19.1
+    "@vitejs/plugin-react": ^3.1.0
+    addressparser: ^1.0.1
+    autotrack: ^2.4.1
+    aws-sdk: ^2.1550.0
+    babel-eslint: ^10.1.0
+    babel-jest: ^29.7.0
+    babel-plugin-styled-components: ^2.1.4
+    babel-plugin-transform-class-properties: ^6.24.1
+    babel-plugin-transform-inline-environment-variables: ^0.4.4
+    babel-plugin-transform-typescript-metadata: ^0.3.2
+    babel-plugin-tsconfig-paths-module-resolver: ^1.0.4
+    body-scroll-lock: ^4.0.0-beta.0
+    browserslist-to-esbuild: ^1.2.0
+    bull: ^4.12.2
+    cancan: 3.1.0
+    chalk: ^4.1.0
+    class-validator: ^0.14.0
+    command-score: ^0.1.2
+    compressorjs: ^1.2.1
+    concurrently: ^7.6.0
+    cookie: ^0.5.0
+    copy-to-clipboard: ^3.3.3
+    core-js: ^3.33.3
+    crypto-js: ^4.2.0
+    css-inline: ^0.11.2
+    datadog-metrics: ^0.11.1
+    date-fns: ^2.30.0
+    dd-trace: ^3.33.0
+    diff: ^5.1.0
+    dotenv: ^4.0.0
+    email-providers: ^1.14.0
+    emoji-mart: ^5.5.2
+    emoji-regex: ^10.3.0
+    es6-error: ^4.1.1
+    eslint: ^8.47.0
+    eslint-config-prettier: ^8.8.0
+    eslint-import-resolver-typescript: ^3.6.1
+    eslint-plugin-es: ^4.1.0
+    eslint-plugin-import: ^2.29.1
+    eslint-plugin-jsx-a11y: ^6.7.1
+    eslint-plugin-lodash: ^7.4.0
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-react: ^7.33.2
+    eslint-plugin-react-hooks: ^4.6.0
+    fetch-retry: ^5.0.6
+    fetch-with-proxy: ^3.0.1
+    focus-visible: ^5.2.0
+    form-data: ^4.0.0
+    fractional-index: ^1.0.0
+    framer-motion: ^4.1.17
+    fs-extra: ^11.2.0
+    fuzzy-search: ^3.2.1
+    glob: ^8.1.0
+    http-errors: 2.0.0
+    husky: ^8.0.3
+    i18next: ^22.5.1
+    i18next-fs-backend: ^2.3.1
+    i18next-http-backend: ^2.2.2
+    i18next-parser: ^7.9.0
+    invariant: ^2.2.4
+    ioredis: ^5.3.2
+    is-printable-key-event: ^1.0.0
+    jest-cli: ^29.7.0
+    jest-environment-jsdom: ^29.6.4
+    jest-fetch-mock: ^3.0.3
+    jsdom: ^22.1.0
+    jsonwebtoken: ^9.0.0
+    jszip: ^3.10.1
+    katex: ^0.16.9
+    kbar: 0.1.0-beta.41
+    koa: ^2.15.0
+    koa-body: ^6.0.1
+    koa-compress: ^5.1.1
+    koa-helmet: ^6.1.0
+    koa-logger: ^3.2.1
+    koa-mount: ^4.0.0
+    koa-router: 7.4.0
+    koa-send: 5.0.1
+    koa-sslify: 5.0.1
+    koa-useragent: ^4.1.0
+    lint-staged: ^13.3.0
+    lodash: ^4.17.21
+    mailparser: ^3.6.7
+    mammoth: ^1.6.0
+    markdown-it: ^13.0.1
+    markdown-it-container: ^3.0.0
+    markdown-it-emoji: ^2.0.0
+    mermaid: 9.3.0
+    mime-types: ^2.1.35
+    mobx: ^4.15.4
+    mobx-react: ^6.3.1
+    mobx-utils: ^4.0.1
+    natural-sort: ^1.0.0
+    node-fetch: 2.7.0
+    nodemailer: ^6.9.9
+    nodemon: ^2.0.22
+    outline-icons: ^3.2.1
+    oy-vey: ^0.12.1
+    passport: ^0.7.0
+    passport-google-oauth2: ^0.2.0
+    passport-oauth2: ^1.6.1
+    passport-slack-oauth2: ^1.2.0
+    patch-package: ^7.0.2
+    pg: ^8.11.1
+    pg-tsquery: ^8.4.1
+    pluralize: ^8.0.0
+    png-chunks-extract: ^1.0.0
+    polished: ^4.2.2
+    postinstall-postinstall: ^2.1.0
+    prettier: ^2.8.8
+    prosemirror-codemark: ^0.4.2
+    prosemirror-commands: ^1.5.2
+    prosemirror-dropcursor: ^1.8.1
+    prosemirror-gapcursor: ^1.3.2
+    prosemirror-history: ^1.3.2
+    prosemirror-inputrules: ^1.3.0
+    prosemirror-keymap: ^1.2.2
+    prosemirror-markdown: ^1.12.0
+    prosemirror-model: ^1.19.2
+    prosemirror-schema-list: ^1.3.0
+    prosemirror-state: ^1.4.3
+    prosemirror-tables: ^1.3.5
+    prosemirror-transform: ^1.8.0
+    prosemirror-view: ^1.32.0
+    query-string: ^7.1.3
+    randomstring: 1.3.0
+    rate-limiter-flexible: ^2.4.2
+    react: ^17.0.2
+    react-avatar-editor: ^13.0.0
+    react-color: ^2.17.3
+    react-dnd: ^16.0.1
+    react-dnd-html5-backend: ^16.0.1
+    react-dom: ^17.0.2
+    react-dropzone: ^11.7.1
+    react-helmet-async: ^2.0.1
+    react-hook-form: ^7.41.5
+    react-i18next: ^12.3.1
+    react-merge-refs: ^2.0.2
+    react-portal: ^4.2.2
+    react-refresh: ^0.14.0
+    react-router-dom: ^5.2.0
+    react-table: ^7.8.0
+    react-virtualized-auto-sizer: ^1.0.21
+    react-waypoint: ^10.3.0
+    react-window: ^1.8.10
+    reakit: ^1.3.11
+    reflect-metadata: ^0.1.14
+    refractor: ^3.6.0
+    request-filtering-agent: ^1.1.2
+    resolve-path: ^1.4.0
+    rfc6902: ^5.1.1
+    rimraf: ^2.5.4
+    rollup-plugin-webpack-stats: ^0.2.4
+    sanitize-filename: ^1.6.3
+    semver: ^7.5.2
+    sequelize: ^6.35.2
+    sequelize-cli: ^6.6.1
+    sequelize-encrypted: ^1.0.0
+    sequelize-typescript: ^2.1.6
+    slug: ^5.3.0
+    slugify: ^1.6.6
+    smooth-scroll-into-view-if-needed: ^1.1.33
+    socket.io: ^4.7.3
+    socket.io-client: ^4.6.1
+    socket.io-redis: ^6.1.1
+    sonner: ^1.0.3
+    stoppable: ^1.1.0
+    string-replace-to-array: ^2.1.0
+    styled-components: ^5.3.11
+    styled-components-breakpoint: ^2.1.1
+    styled-normalize: ^8.1.0
+    terser: ^5.19.2
+    throng: ^5.0.0
+    tiny-cookie: ^2.5.1
+    tmp: ^0.2.1
+    turndown: ^7.1.2
+    typescript: ^5.3.3
+    umzug: ^3.2.1
+    utility-types: ^3.10.0
+    uuid: ^8.3.2
+    validator: 13.11.0
+    vite: ^5.0.12
+    vite-plugin-pwa: ^0.17.4
+    vite-plugin-static-copy: ^0.17.0
+    winston: ^3.10.0
+    ws: ^7.5.9
+    y-indexeddb: ^9.0.11
+    y-protocols: ^1.0.6
+    yarn-deduplicate: ^6.0.2
+    yauzl: ^2.10.0
+    yjs: ^13.6.1
+    zod: ^3.22.4
   languageName: unknown
   linkType: soft
 
@@ -16228,29 +16228,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^1.1.6#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.12.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.13.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.19.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#optional!builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.1#~builtin<compat/resolve>, resolve@patch:resolve@npm%3A^1.22.4#~builtin<compat/resolve>":
   version: 1.22.4
-  resolution: "resolve@patch:resolve@npm%3A1.22.4#optional!builtin<compat/resolve>::version=1.22.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A1.22.4#~builtin<compat/resolve>::version=1.22.4&hash=c3c19d"
   dependencies:
     is-core-module: "npm:^2.13.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 60ca179599acf8b1bb17b850280a7081781b457d235d48197dc893b82d75741f191c5fe2d93e5729292234d0b0d88e9add273df4b9e04755eeed4fd7d23f1c79
+  checksum: 8/c45f2545fdc4d21883861b032789e20aa67a2f2692f68da320cc84d5724cd02f2923766c5354b3210897e88f1a7b3d6d2c7c22faeead8eed7078e4c783a444bc
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@npm%3A^2.0.0-next.4#optional!builtin<compat/resolve>":
+"resolve@patch:resolve@npm%3A^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.5
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.5#optional!builtin<compat/resolve>::version=2.0.0-next.5&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.5#~builtin<compat/resolve>::version=2.0.0-next.5&hash=c3c19d"
   dependencies:
     is-core-module: "npm:^2.13.0"
     path-parse: "npm:^1.0.7"
     supports-preserve-symlinks-flag: "npm:^1.0.0"
   bin:
     resolve: bin/resolve
-  checksum: 78ad6edb8309a2bfb720c2c1898f7907a37f858866ce11a5974643af1203a6a6e05b2fa9c53d8064a673a447b83d42569260c306d43628bff5bb101969708355
+  checksum: 8/064d09c1808d0c51b3d90b5d27e198e6d0c5dad0eb57065fd40803d6a20553e5398b07f76739d69cbabc12547058bec6b32106ea66622375fb0d7e8fca6a846c
   languageName: node
   linkType: hard
 
@@ -18174,23 +18174,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^4.2.4#optional!builtin<compat/typescript>":
-  version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#optional!builtin<compat/typescript>::version=4.7.4&hash=65a307"
+"typescript@patch:typescript@^5.3.3#~builtin<compat/typescript>":
+  version: 5.3.3
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=e012d7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 2eb6e31b04fabec84a4d07b5d567deb5ef0a2971d89d9adb16895f148f7d8508adfb12074abc2efc6966805d3664e68ab67925060e5b0ebd8da616db4b151906
+  checksum: 8/4e604a9e107ce0c23b16a2f8d79d0531d4d8fe9ebbb7a8c395c66998c39892f0e0a071ef0b0d4e66420a8ec2b8d6cfd9cdb29ba24f25b37cba072e9282376df9
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>":
-  version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"
+"typescript@patch:typescript@npm%3A^4.2.4#~builtin<compat/typescript>":
+  version: 4.7.4
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=65a307"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 1d0a5f4ce496c42caa9a30e659c467c5686eae15d54b027ee7866744952547f1be1262f2d40de911618c242b510029d51d43ff605dba8fb740ec85ca2d3f9500
+  checksum: 8/9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
   languageName: node
   linkType: hard
 
