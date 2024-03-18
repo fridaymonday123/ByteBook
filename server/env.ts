@@ -720,6 +720,13 @@ export class Environment {
   );
 
   /**
+  * This is used to verify webhook requests received from Slack.
+  */
+  @IsOptional()
+  public GTP_RESEARCH_URL = process.env.GTP_RESEARCH_URL ?? "";
+
+
+  /**
    * The product name
    */
     public APP_NAME = "RichBook";

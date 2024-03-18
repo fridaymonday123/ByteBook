@@ -52,7 +52,7 @@ export default function useDictionary() {
       link: t("Link"),
       linkCopied: t("Link copied to clipboard"),
       mark: t("Highlight"),
-      newLineEmpty: `${t("Type '/' to insert")}…`,
+      newLineEmpty: `${t("Press 'space' for AI, Type '/' to insert")}…`,
       newLineWithSlash: `${t("Keep typing to filter")}…`,
       noResults: t("No results"),
       openLink: t("Open link"),

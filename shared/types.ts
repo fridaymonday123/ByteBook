@@ -63,6 +63,7 @@ export type PublicEnv = {
   ROOT_SHARE_ID?: string;
   OIDC_DISABLE_REDIRECT?: boolean;
   OIDC_LOGOUT_URI?: string;
+  GTP_RESEARCH_URL: string;
   analytics: {
     service?: IntegrationService | UserCreatableIntegrationService;
     settings?: IntegrationSettings<IntegrationType.Analytics>;
