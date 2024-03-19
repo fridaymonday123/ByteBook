@@ -14,9 +14,9 @@
   <a href="https://translate.bytebook.ai/project/bytebook" alt="Localized"><img src="https://badges.crowdin.net/outline/localized.svg"></a>
 </p>
 
-This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use Outline then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
+This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use Outline then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using ByteBook in [our guide](https://docs.bytebook.ai/s/guide).
 
-If you'd like to run your own copy of Outline or contribute to development then this is the place for you.
+If you'd like to run your own copy of ByteBook or contribute to development then this is the place for you.
 
 # Installation
 
@@ -30,11 +30,11 @@ There is a short guide for [setting up a development environment](https://docs.b
 
 ## Contributing
 
-Outline is built and maintained by a small team – we'd love your help to fix bugs and add features!
+ByteBook is built and maintained by a small team – we'd love your help to fix bugs and add features!
 
 Before submitting a pull request _please_ discuss with the core team by creating or commenting in an issue on [GitHub](https://www.github.com/fridaymonday123/ByteBook/issues) – we'd also love to hear from you in the [discussions](https://www.github.com/fridaymonday123/ByteBook/discussions). This way we can ensure that an approach is agreed on before code is written. This will result in a much higher liklihood of your code being accepted.
 
-If you’re looking for ways to get started, here's a list of ways to help us improve Outline:
+If you’re looking for ways to get started, here's a list of ways to help us improve ByteBook:
 
 - [Translation](docs/TRANSLATION.md) into other languages
 - Issues with [`good first issue`](https://github.com/fridaymonday123/ByteBook/labels/good%20first%20issue) label
@@ -44,12 +44,12 @@ If you’re looking for ways to get started, here's a list of ways to help us im
 
 ## Architecture
 
-If you're interested in contributing or learning more about the Outline codebase
+If you're interested in contributing or learning more about the ByteBook codebase
 please refer to the [architecture document](docs/ARCHITECTURE.md) first for a high level overview of how the application is put together.
 
 ## Debugging
 
-In development Outline outputs simple logging to the console, prefixed by categories. In production it outputs JSON logs, these can be easily parsed by your preferred log ingestion pipeline.
+In development ByteBook outputs simple logging to the console, prefixed by categories. In production it outputs JSON logs, these can be easily parsed by your preferred log ingestion pipeline.
 
 HTTP logging is disabled by default, but can be enabled by setting the `DEBUG=http` environment variable.
 
