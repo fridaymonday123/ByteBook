@@ -1,5 +1,5 @@
 <p align="center">
- ByteBook
+[**ByteBook**]
 </p>
 <p align="center">
   <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out ByteBook using our hosted version at <a href="https://www.bytebook.ai">www.bytebook.ai/a>.</i>
@@ -14,13 +14,13 @@
   <a href="https://translate.bytebook.ai/project/bytebook" alt="Localized"><img src="https://badges.crowdin.net/outline/localized.svg"></a>
 </p>
 
-This is the source code that runs [**Outline**](https://www.bytebook.ai) and all the associated services. If you want to use Outline then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
+This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use Outline then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
 
 If you'd like to run your own copy of Outline or contribute to development then this is the place for you.
 
 # Installation
 
-Please see the [documentation](https://docs.bytebook.ai/s/hosting/) for running your own copy of Outline in a production configuration.
+Please see the [documentation](https://docs.bytebook.ai/s/hosting/) for running your own copy of ByteBook in a production configuration.
 
 If you have questions or improvements for the docs please create a thread in [GitHub discussions](https://github.com/fridaymonday123/ByteBook/discussions).
 
