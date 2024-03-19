@@ -1,5 +1,5 @@
 <p align="center">
-[**ByteBook**]
+[ByteBook]
 </p>
 <p align="center">
   <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out ByteBook using our hosted version at <a href="https://www.bytebook.ai">www.bytebook.ai/a>.</i>
