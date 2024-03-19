@@ -243,7 +243,7 @@ export default class PasteHandler extends Extension {
 
             // If the HTML on the clipboard is from Prosemirror then the best
             // compatability is to just use the HTML parser, regardless of
-            // whether it "looks" like Markdown, see: outline/outline#2416
+            // whether it "looks" like Markdown, see: fridaymonday123/ByteBook#2416
             if (html?.includes("data-pm-slice")) {
               return false;
             }

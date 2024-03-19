@@ -15,7 +15,7 @@ import ChangeLanguage from "~/components/ChangeLanguage";
 import Fade from "~/components/Fade";
 import Flex from "~/components/Flex";
 import Heading from "~/components/Heading";
-import RichBookIcon from "~/components/Icons/RichBookIcon";
+import ByteBookIcon from "~/components/Icons/ByteBookIcon";
 import Input from "~/components/Input";
 import LoadingIndicator from "~/components/LoadingIndicator";
 import PageTitle from "~/components/PageTitle";
@@ -71,7 +71,7 @@ function Login({ children }: Props) {
       .toLowerCase()
       .trim()
       .replace(/^https?:\/\//, "");
-    const host = `https://${normalizedSubdomain}.getoutline.com`;
+    const host = `https://${normalizedSubdomain}.bytebook.ai`;
     await Desktop.bridge.addCustomHost(host);
 
     setTimeout(() => {
@@ -187,7 +187,7 @@ function Login({ children }: Props) {
               style={{ textAlign: "right" }}
               placeholder={t("subdomain")}
             >
-              <Domain>.getoutline.com</Domain>
+              <Domain>.bytebook.ai</Domain>
             </Input>
           </Flex>
           <ButtonLarge type="submit" fullwidth>
@@ -232,7 +232,8 @@ function Login({ children }: Props) {
   if (
     config.providers.length === 1 &&
     config.providers[0].id === "oidc" &&
-    !env.OIDC_DISABLE_REDIRECT
+    !env.OIDC_DISABLE_REDIRECT &&
+    !query.get("notice")
   ) {
     window.location.href = getRedirectUrl(config.providers[0].authUrl);
     return null;
@@ -251,7 +252,7 @@ function Login({ children }: Props) {
           {config.logo && !isCreate ? (
             <TeamLogo size={100} src={config.logo} />
           ) : (
-                 <RichBookIcon size={100} />
+            <ByteBookIcon size={100} />
           )}
         </Logo>
         {isCreate ? (

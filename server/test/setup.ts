@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import sharedEnv from "@shared/env";
 import env from "@server/env";
 import Redis from "@server/storage/redis";
@@ -26,5 +27,5 @@ jest.mock("aws-sdk", () => {
 afterAll(() => Redis.defaultClient.disconnect());
 
 beforeEach(() => {
-  env.URL = sharedEnv.URL = "https://app.outline.dev";
+  env.URL = sharedEnv.URL = "https://app.bytebook.ai";
 });

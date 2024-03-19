@@ -113,7 +113,7 @@ describe("#auth.config", () => {
     });
     const res = await server.post("/api/auth.config", {
       headers: {
-        host: `${subdomain}.outline.dev`,
+        host: `${subdomain}.bytebook.ai`,
       },
     });
     const body = await res.json();
@@ -159,7 +159,7 @@ describe("#auth.config", () => {
     });
     const res = await server.post("/api/auth.config", {
       headers: {
-        host: `${subdomain}.outline.dev`,
+        host: `${subdomain}.bytebook.ai`,
       },
     });
     const body = await res.json();
@@ -184,7 +184,7 @@ describe("#auth.config", () => {
     });
     const res = await server.post("/api/auth.config", {
       headers: {
-        host: `${subdomain}.outline.dev`,
+        host: `${subdomain}.bytebook.ai`,
       },
     });
     const body = await res.json();

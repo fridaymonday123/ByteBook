@@ -51,7 +51,7 @@ function ApiKeys() {
           components={{
             em: (
               <a
-                href="https://www.richbook.ai/developers"
+                href="https://www.bytebook.ai/developers"
                 target="_blank"
                 rel="noreferrer"
               />

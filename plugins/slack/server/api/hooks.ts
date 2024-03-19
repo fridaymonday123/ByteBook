@@ -4,7 +4,6 @@ import escapeRegExp from "lodash/escapeRegExp";
 import { Op } from "sequelize";
 import { z } from "zod";
 import { IntegrationService } from "@shared/types";
-import env from "@server/env";
 import {
   AuthenticationError,
   InvalidRequestError,
@@ -26,6 +25,7 @@ import SearchHelper from "@server/models/helpers/SearchHelper";
 import { APIContext } from "@server/types";
 import { safeEqual } from "@server/utils/crypto";
 import { opts } from "@server/utils/i18n";
+import env from "../env";
 import presentMessageAttachment from "../presenters/messageAttachment";
 import * as Slack from "../slack";
 import * as T from "./schema";
@@ -44,7 +44,7 @@ function verifySlackToken(token: string) {
   }
 }
 
-// triggered by a user posting a getoutline.com link in Slack
+// triggered by a user posting a bytebook.ai link in Slack
 router.post(
   "hooks.unfurl",
   validate(T.HooksUnfurlSchema),
@@ -184,7 +184,7 @@ router.post(
   }
 );
 
-// triggered by the /outline command in Slack
+// triggered by the /ByteBook command in Slack
 router.post(
   "hooks.slack",
   validate(T.HooksSlackCommandSchema),
@@ -259,7 +259,7 @@ router.post(
       ctx.body = {
         response_type: "ephemeral",
         text: t("How to use {{ command }}", {
-          command: "/outline",
+          command: "/ByteBook",
           ...opts(user),
         }),
         attachments: [
@@ -267,8 +267,8 @@ router.post(
             text: t(
               "To search your workspace use {{ command }}. \nType {{ command2 }} help to display this help text.",
               {
-                command: `/outline keyword`,
-                command2: `/outline help`,
+                command: `/ByteBook keyword`,
+                command2: `/ByteBook help`,
                 ...opts(user),
               }
             ),

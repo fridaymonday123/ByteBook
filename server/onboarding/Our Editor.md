@@ -15,4 +15,4 @@ Linking to another document automatically creates backlinks which are kept up-to
 
 ## Rich documents
 
-The editor supports a variety of content blocks including images, tables, lists, quotes, task lists, videos, and more. Type `/` on an empty line or click on the `+` icon to trigger the block insert menu, you can keep typing to filter it down. Of course, you can also drag and drop images to include them in your document or paste a link to embed content from one of the many supported [integrations](https://www.getoutline.com/integrations)
+The editor supports a variety of content blocks including images, tables, lists, quotes, task lists, videos, and more. Type `/` on an empty line or click on the `+` icon to trigger the block insert menu, you can keep typing to filter it down. Of course, you can also drag and drop images to include them in your document or paste a link to embed content from one of the many supported [integrations](https://www.bytebook.ai/integrations)

@@ -18,6 +18,7 @@ import FindAndReplaceExtension from "~/editor/extensions/FindAndReplace";
 import HoverPreviewsExtension from "~/editor/extensions/HoverPreviews";
 import Keys from "~/editor/extensions/Keys";
 import MentionMenuExtension from "~/editor/extensions/MentionMenu";
+import GptResearchExtension from "~/editor/extensions/GptResearch";
 import PasteHandler from "~/editor/extensions/PasteHandler";
 import PreventTab from "~/editor/extensions/PreventTab";
 import SmartText from "~/editor/extensions/SmartText";
@@ -43,6 +44,7 @@ const extensions = [
   BlockMenuExtension,
   EmojiMenuExtension,
   MentionMenuExtension,
+  GptResearchExtension,
   FindAndReplaceExtension,
   HoverPreviewsExtension,
   // Order these default key handlers last
@@ -210,7 +212,7 @@ function DocumentEditor(props: Props, ref: React.RefObject<any>) {
       <EditorComponent
         ref={mergeRefs([ref, handleRefChanged])}
         autoFocus={!!document.title && !props.defaultValue}
-        placeholder={t("Type '/' to insert, or start writing…")}
+        placeholder={t("Press 'space' for AI, Type '/' to insert, or start writing…")}
         scrollTo={decodeURIComponent(window.location.hash)}
         readOnly={readOnly}
         shareId={shareId}
