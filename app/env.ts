@@ -1,6 +1,8 @@
+import { PublicEnv } from "../shared/types";
+
 declare global {
   interface Window {
-    env: Record<string, any>;
+    env: PublicEnv;
   }
 }
 

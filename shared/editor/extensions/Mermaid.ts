@@ -126,7 +126,7 @@ function overlap(
 /*
   This code find the decoration that overlap the most with a given node.
   This will ensure we can find the best decoration that match the last change set
-  See: https://github.com/fridaymonday123/ByteBook/pull/5852/files#r1334929120
+  See: https://github.com/outline/outline/pull/5852/files#r1334929120
 */
 function findBestOverlapDecoration(
   decorations: Decoration[],

@@ -10,7 +10,6 @@ import type {
   JSONObject,
   NavigationNode,
   PublicTeam,
-  StatusFilter,
 } from "@shared/types";
 import { subtractDate } from "@shared/utils/date";
 import { bytesToHumanReadable } from "@shared/utils/files";
@@ -37,7 +36,8 @@ export type SearchParams = {
   offset?: number;
   limit?: number;
   dateFilter?: DateFilter;
-  statusFilter?: StatusFilter[];
+  includeArchived?: boolean;
+  includeDrafts?: boolean;
   collectionId?: string;
   userId?: string;
   shareId?: string;
@@ -109,7 +109,7 @@ export default class DocumentsStore extends Store<Document> {
 
   createdByUser(userId: string): Document[] {
     return orderBy(
-      filter(this.all, (d) => d.createdBy?.id === userId),
+      filter(this.all, (d) => d.createdBy.id === userId),
       "updatedAt",
       "desc"
     );
@@ -596,10 +596,10 @@ export default class DocumentsStore extends Store<Document> {
       throw new Error(`The selected file type is not supported (${file.type})`);
     }
 
-    if (file.size > env.FILE_STORAGE_IMPORT_MAX_SIZE) {
+    if (file.size > env.MAXIMUM_IMPORT_SIZE) {
       throw new Error(
         `The selected file was larger than the ${bytesToHumanReadable(
-          env.FILE_STORAGE_IMPORT_MAX_SIZE
+          env.MAXIMUM_IMPORT_SIZE
         )} maximum size`
       );
     }

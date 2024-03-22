@@ -40,7 +40,7 @@ export default function Notices() {
       {notice === "pending-deletion" && (
         <Trans>
           The workspace associated with your user is scheduled for deletion and
-          cannot be accessed at this time.
+          cannot at accessed at this time.
         </Trans>
       )}
       {notice === "maximum-reached" && (

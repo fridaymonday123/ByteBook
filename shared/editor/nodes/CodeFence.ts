@@ -62,7 +62,6 @@ import type { Dictionary } from "~/hooks/useDictionary";
 import { UserPreferences } from "../../types";
 import Storage from "../../utils/Storage";
 import { isMac } from "../../utils/browser";
-import backspaceToParagraph from "../commands/backspaceToParagraph";
 import {
   newlineInCode,
   insertSpaceTab,
@@ -256,7 +255,6 @@ export default class CodeFence extends Node {
 
         return newlineInCode(state, dispatch);
       },
-      Backspace: backspaceToParagraph(type),
       "Shift-Enter": newlineInCode,
       "Mod-a": selectAll(type),
     };

@@ -465,10 +465,8 @@ export type DocumentJSONExport = {
   id: string;
   urlId: string;
   title: string;
-  emoji: string | null;
   data: Record<string, any>;
   createdById: string;
-  createdByName: string;
   createdByEmail: string | null;
   createdAt: string;
   updatedAt: string;

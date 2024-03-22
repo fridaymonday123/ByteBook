@@ -6,6 +6,7 @@ import { Profile } from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth2";
 import { slugifyDomain } from "@shared/utils/domains";
 import accountProvisioner from "@server/commands/accountProvisioner";
+import env from "@server/env";
 import {
   GmailAccountCreationError,
   TeamDomainRequiredError,
@@ -18,10 +19,9 @@ import {
   getTeamFromContext,
   getClientFromContext,
 } from "@server/utils/passport";
-import config from "../../plugin.json";
-import env from "../env";
 
 const router = new Router();
+const providerName = "google";
 
 const scopes = [
   "https://www.googleapis.com/auth/userinfo.profile",
@@ -42,7 +42,7 @@ if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) {
       {
         clientID: env.GOOGLE_CLIENT_ID,
         clientSecret: env.GOOGLE_CLIENT_SECRET,
-        callbackURL: `${env.URL}/auth/${config.id}.callback`,
+        callbackURL: `${env.URL}/auth/google.callback`,
         passReqToCallback: true,
         // @ts-expect-error StateStore
         store: new StateStore(),
@@ -110,7 +110,7 @@ if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) {
               avatarUrl,
             },
             authenticationProvider: {
-              name: config.id,
+              name: providerName,
               providerId: domain ?? "",
             },
             authentication: {
@@ -131,13 +131,14 @@ if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) {
   );
 
   router.get(
-    config.id,
-    passport.authenticate(config.id, {
+    "google",
+    passport.authenticate(providerName, {
       accessType: "offline",
       prompt: "select_account consent",
     })
   );
-  router.get(`${config.id}.callback`, passportMiddleware(config.id));
+
+  router.get("google.callback", passportMiddleware(providerName));
 }
 
 export default router;

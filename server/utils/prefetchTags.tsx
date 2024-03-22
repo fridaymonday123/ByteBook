@@ -32,12 +32,12 @@ if (env.isProduction) {
   const manifest = readManifestFile();
 
   const returnFileAndImportsFromManifest = (
-    manifestStructure: ManifestStructure,
+    manifest: ManifestStructure,
     file: string
   ): string[] => [
-    manifestStructure[file]["file"],
-    ...(manifestStructure[file]["imports"] ?? []).map(
-      (entry: string) => manifestStructure[entry]["file"]
+    manifest[file]["file"],
+    ...(manifest[file]["imports"] ?? []).map(
+      (entry: string) => manifest[entry]["file"]
     ),
   ];
 

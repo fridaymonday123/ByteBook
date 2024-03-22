@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { s, ellipsis } from "@shared/styles";
 import Flex from "~/components/Flex";
 import BreadcrumbMenu from "~/menus/BreadcrumbMenu";
-import { undraggableOnDesktop } from "~/styles";
 import { MenuInternalLink } from "~/types";
 
 type Props = {
@@ -76,7 +75,6 @@ const Item = styled(Link)<{ $highlight: boolean; $withIcon: boolean }>`
   height: 24px;
   font-weight: ${(props) => (props.$highlight ? "500" : "inherit")};
   margin-left: ${(props) => (props.$withIcon ? "4px" : "0")};
-  ${undraggableOnDesktop()}
 
   svg {
     flex-shrink: 0;

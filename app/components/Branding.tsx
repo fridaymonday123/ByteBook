@@ -3,7 +3,7 @@ import styled from "styled-components";
 import breakpoint from "styled-components-breakpoint";
 import { depths, s } from "@shared/styles";
 import env from "~/env";
-import ByteBookIcon from "./Icons/ByteBookIcon";
+import OutlineIcon from "./Icons/OutlineIcon";
 
 type Props = {
   href?: string;
@@ -12,7 +12,7 @@ type Props = {
 function Branding({ href = env.URL }: Props) {
   return (
     <Link href={href}>
-      <ByteBookIcon size={20} />
+      <OutlineIcon size={20} />
       &nbsp;{env.APP_NAME}
     </Link>
   );

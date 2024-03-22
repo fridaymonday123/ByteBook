@@ -4,6 +4,7 @@ import escapeRegExp from "lodash/escapeRegExp";
 import { Op } from "sequelize";
 import { z } from "zod";
 import { IntegrationService } from "@shared/types";
+import env from "@server/env";
 import {
   AuthenticationError,
   InvalidRequestError,
@@ -25,7 +26,6 @@ import SearchHelper from "@server/models/helpers/SearchHelper";
 import { APIContext } from "@server/types";
 import { safeEqual } from "@server/utils/crypto";
 import { opts } from "@server/utils/i18n";
-import env from "../env";
 import presentMessageAttachment from "../presenters/messageAttachment";
 import * as Slack from "../slack";
 import * as T from "./schema";

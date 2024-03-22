@@ -15,7 +15,7 @@ import ChangeLanguage from "~/components/ChangeLanguage";
 import Fade from "~/components/Fade";
 import Flex from "~/components/Flex";
 import Heading from "~/components/Heading";
-import ByteBookIcon from "~/components/Icons/ByteBookIcon";
+import RichBookIcon from "~/components/Icons/RichBookIcon";
 import Input from "~/components/Input";
 import LoadingIndicator from "~/components/LoadingIndicator";
 import PageTitle from "~/components/PageTitle";
@@ -232,8 +232,7 @@ function Login({ children }: Props) {
   if (
     config.providers.length === 1 &&
     config.providers[0].id === "oidc" &&
-    !env.OIDC_DISABLE_REDIRECT &&
-    !query.get("notice")
+    !env.OIDC_DISABLE_REDIRECT
   ) {
     window.location.href = getRedirectUrl(config.providers[0].authUrl);
     return null;
@@ -252,7 +251,7 @@ function Login({ children }: Props) {
           {config.logo && !isCreate ? (
             <TeamLogo size={100} src={config.logo} />
           ) : (
-            <ByteBookIcon size={100} />
+                 <RichBookIcon size={100} />
           )}
         </Logo>
         {isCreate ? (

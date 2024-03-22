@@ -55,20 +55,6 @@ export default class NotificationsStore extends Store<Notification> {
   };
 
   /**
-   * Mark all notifications as archived.
-   */
-  @action
-  markAllAsArchived = async () => {
-    await client.post("/notifications.update_all", {
-      archivedAt: new Date().toISOString(),
-    });
-
-    runInAction("NotificationsStore#markAllAsArchived", () => {
-      this.clear();
-    });
-  };
-
-  /**
    * Returns the approximate number of unread notifications.
    */
   @computed

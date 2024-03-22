@@ -59,7 +59,7 @@ export const renderApp = async (
     title = env.APP_NAME,
     description = "A modern team knowledge base for your internal documentation, product specs, support answers, meeting notes, onboarding, &amp; more…",
     canonical = "",
-    shortcutIcon = `${env.CDN_URL || ""}/images/favicon-32.png`,
+    shortcutIcon = `${env.CDN_URL || ""}/images/eye-66.png`,
   } = options;
 
   if (ctx.request.path === "/realtime/") {
@@ -98,7 +98,7 @@ export const renderApp = async (
     .replace(/\{canonical-url\}/g, canonical)
     .replace(/\{shortcut-icon\}/g, shortcutIcon)
     .replace(/\{prefetch\}/g, shareId ? "" : prefetchTags)
-    .replace(/\{slack-app-id\}/g, env.public.SLACK_APP_ID || "")
+    .replace(/\{slack-app-id\}/g, env.SLACK_APP_ID || "")
     .replace(/\{cdn-url\}/g, env.CDN_URL || "")
     .replace(/\{script-tags\}/g, scriptTags)
     .replace(/\{csp-nonce\}/g, ctx.state.cspNonce);

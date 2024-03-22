@@ -9,7 +9,7 @@ type Props = {
   cover?: boolean;
 };
 
-export default function ByteBookIcon({
+export default function RidingCat100Icon({
   size = 100,
   cover,
   color = "currentColor",

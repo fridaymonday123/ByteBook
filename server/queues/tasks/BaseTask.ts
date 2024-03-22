@@ -13,7 +13,7 @@ export enum TaskSchedule {
   Hourly = "hourly",
 }
 
-export default abstract class BaseTask<T extends Record<string, any>> {
+export default abstract class BaseTask<T> {
   /**
    * An optional schedule for this task to be run automatically.
    */

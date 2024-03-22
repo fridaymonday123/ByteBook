@@ -1,7 +1,7 @@
 import sharedEnv from "../env";
 import parseDocumentSlug from "./parseDocumentSlug";
 
-sharedEnv.URL = "https://app.bytebook.ai";
+sharedEnv.URL = "https://app.outline.dev";
 
 describe("#parseDocumentSlug", () => {
   it("should work with fully qualified url", () => {
@@ -13,7 +13,7 @@ describe("#parseDocumentSlug", () => {
   it("should work with paths after document slug", () => {
     expect(
       parseDocumentSlug(
-        "http://mywiki.bytebook.ai/doc/my-doc-y4j4tR4UuV/edit"
+        "http://mywiki.getoutline.com/doc/my-doc-y4j4tR4UuV/edit"
       )
     ).toEqual("my-doc-y4j4tR4UuV");
   });
@@ -21,14 +21,14 @@ describe("#parseDocumentSlug", () => {
   it("should work with hash", () => {
     expect(
       parseDocumentSlug(
-        "http://mywiki.bytebook.ai/doc/my-doc-y4j4tR4UuV#state"
+        "http://mywiki.getoutline.com/doc/my-doc-y4j4tR4UuV#state"
       )
     ).toEqual("my-doc-y4j4tR4UuV");
   });
 
   it("should work with subdomain qualified url", () => {
     expect(
-      parseDocumentSlug("http://mywiki.bytebook.ai/doc/my-doc-y4j4tR4UuV")
+      parseDocumentSlug("http://mywiki.getoutline.com/doc/my-doc-y4j4tR4UuV")
     ).toEqual("my-doc-y4j4tR4UuV");
   });
 

@@ -7,12 +7,12 @@ import BaseTask, {
   TaskSchedule,
 } from "@server/queues/tasks/BaseTask";
 
-type Props = Record<string, never>;
+type Props = void;
 
 export default class CleanupWebhookDeliveriesTask extends BaseTask<Props> {
   static cron = TaskSchedule.Daily;
 
-  public async perform() {
+  public async perform(_: Props) {
     Logger.info("task", `Deleting WebhookDeliveries older than one week…`);
     const count = await WebhookDelivery.unscoped().destroy({
       where: {

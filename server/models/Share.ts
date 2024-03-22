@@ -17,7 +17,7 @@ import {
   Unique,
   BeforeUpdate,
 } from "sequelize-typescript";
-import { UrlHelper } from "@shared/utils/UrlHelper";
+import { SHARE_URL_SLUG_REGEX } from "@shared/utils/urlHelpers";
 import env from "@server/env";
 import { ValidationError } from "@server/errors";
 import Collection from "./Collection";
@@ -96,7 +96,7 @@ class Share extends IdModel<
 
   @AllowNull
   @Is({
-    args: UrlHelper.SHARE_URL_SLUG_REGEX,
+    args: SHARE_URL_SLUG_REGEX,
     msg: "Must be only alphanumeric and dashes",
   })
   @Column

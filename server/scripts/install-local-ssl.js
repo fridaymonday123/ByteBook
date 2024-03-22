@@ -11,7 +11,7 @@ const sslKey = path.join(sslDir, "private.key");
 if (!fs.existsSync(sslKey) || !fs.existsSync(sslCert)) {
   try {
     exec(
-      `mkcert -cert-file ${sslDir}/public.cert -key-file ${sslDir}/private.key "*.bytebook.ai" && mkcert -install`
+        `mkcert -cert-file ${sslDir}/public.cert -key-file ${sslDir}/private.key "*.richbook.ai" && mkcert -install`
     );
     console.log("🔒 Local SSL certificate created");
   } catch (e) {

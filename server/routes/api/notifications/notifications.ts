@@ -1,5 +1,4 @@
 import Router from "koa-router";
-import { isNil } from "lodash";
 import isNull from "lodash/isNull";
 import isUndefined from "lodash/isUndefined";
 import { WhereOptions, Op } from "sequelize";
@@ -81,16 +80,12 @@ router.post(
     if (eventType) {
       where = { ...where, event: eventType };
     }
-    if (!isNil(archived)) {
+    if (archived) {
       where = {
         ...where,
-        archivedAt: archived
-          ? {
-              [Op.ne]: null,
-            }
-          : {
-              [Op.eq]: null,
-            },
+        archivedAt: {
+          [Op.ne]: null,
+        },
       };
     }
     const [notifications, total, unseen] = await Promise.all([

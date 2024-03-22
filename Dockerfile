@@ -9,7 +9,7 @@ FROM node:20-alpine AS runner
 
 RUN apk update && apk add --no-cache curl && apk add --no-cache ca-certificates
 
-LABEL org.opencontainers.image.source="https://github.com/outline/outline"
+LABEL org.opencontainers.image.source="https://github.com/fridaymonay123/RichBook"
 
 ARG APP_PATH
 WORKDIR $APP_PATH
@@ -25,15 +25,15 @@ COPY --from=base $APP_PATH/package.json ./package.json
 RUN addgroup -g 1001 -S nodejs && \
   adduser -S nodejs -u 1001 && \
   chown -R nodejs:nodejs $APP_PATH/build && \
-  mkdir -p /var/lib/bytebook && \
-  chown -R nodejs:nodejs /var/lib/bytebook
+  mkdir -p /var/lib/richbook && \
+	chown -R nodejs:nodejs /var/lib/richbook
 
-ENV FILE_STORAGE_LOCAL_ROOT_DIR /var/lib/bytebook/data
+ENV FILE_STORAGE_LOCAL_ROOT_DIR /var/lib/richbook/data
 RUN mkdir -p "$FILE_STORAGE_LOCAL_ROOT_DIR" && \
   chown -R nodejs:nodejs "$FILE_STORAGE_LOCAL_ROOT_DIR" && \
   chmod 1777 "$FILE_STORAGE_LOCAL_ROOT_DIR"
 
-VOLUME /var/lib/bytebook/data
+VOLUME /var/lib/richbook/data
 
 USER nodejs
 

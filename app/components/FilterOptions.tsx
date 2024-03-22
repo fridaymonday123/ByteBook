@@ -16,7 +16,7 @@ type TFilterOption = {
 
 type Props = {
   options: TFilterOption[];
-  selectedKeys: (string | null | undefined)[];
+  activeKey: string | null | undefined;
   defaultLabel?: string;
   selectedPrefix?: string;
   className?: string;
@@ -25,7 +25,7 @@ type Props = {
 
 const FilterOptions = ({
   options,
-  selectedKeys = [],
+  activeKey = "",
   defaultLabel = "Filter options",
   selectedPrefix = "",
   className,
@@ -34,22 +34,17 @@ const FilterOptions = ({
   const menu = useMenuState({
     modal: true,
   });
-  const selectedItems = options.filter((option) =>
-    selectedKeys.includes(option.key)
-  );
+  const selected =
+    options.find((option) => option.key === activeKey) || options[0];
 
-  const selectedLabel = selectedItems.length
-    ? selectedItems
-        .map((selected) => `${selectedPrefix} ${selected.label}`)
-        .join(", ")
-    : "";
+  const selectedLabel = selected ? `${selectedPrefix} ${selected.label}` : "";
 
   return (
     <Wrapper>
       <MenuButton {...menu}>
         {(props) => (
           <StyledButton {...props} className={className} neutral disclosure>
-            {selectedItems.length ? selectedLabel : defaultLabel}
+            {activeKey ? selectedLabel : defaultLabel}
           </StyledButton>
         )}
       </MenuButton>
@@ -61,7 +56,7 @@ const FilterOptions = ({
               onSelect(option.key);
               menu.hide();
             }}
-            selected={selectedKeys.includes(option.key)}
+            selected={option.key === activeKey}
             {...menu}
           >
             {option.icon && <Icon>{option.icon}</Icon>}

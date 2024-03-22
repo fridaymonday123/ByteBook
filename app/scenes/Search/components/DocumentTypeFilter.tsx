@@ -1,50 +1,80 @@
 import * as React from "react";
 import { useTranslation } from "react-i18next";
-import { StatusFilter as TStatusFilter } from "@shared/types";
 import FilterOptions from "~/components/FilterOptions";
 
 type Props = {
-  statusFilter: TStatusFilter[];
-  onSelect: (option: { statusFilter: TStatusFilter[] }) => void;
+  includeArchived?: boolean;
+  includeDrafts?: boolean;
+  onSelect: (option: {
+    includeArchived?: boolean;
+    includeDrafts?: boolean;
+  }) => void;
 };
 
-const DocumentTypeFilter = ({ statusFilter, onSelect }: Props) => {
+enum DocumentType {
+  Published = "published",
+  Active = "active",
+  All = "all",
+}
+
+const DocumentTypeFilter = ({
+  includeArchived,
+  includeDrafts,
+  onSelect,
+}: Props) => {
   const { t } = useTranslation();
   const options = React.useMemo(
     () => [
       {
-        key: TStatusFilter.Published,
+        key: DocumentType.Published,
         label: t("Published documents"),
+        note: t("Documents you have access to, excluding drafts"),
       },
       {
-        key: TStatusFilter.Archived,
-        label: t("Archived documents"),
+        key: DocumentType.Active,
+        label: t("Active documents"),
+        note: t("Documents you have access to, including drafts"),
       },
       {
-        key: TStatusFilter.Draft,
-        label: t("Draft documents"),
+        key: DocumentType.All,
+        label: t("All documents"),
+        note: t("Documents you have access to, including drafts and archived"),
       },
     ],
     [t]
   );
 
-  const handleSelect = (key: TStatusFilter) => {
-    let modifiedStatusFilter;
-    if (statusFilter.includes(key)) {
-      modifiedStatusFilter = statusFilter.filter((status) => status !== key);
-    } else {
-      modifiedStatusFilter = [...statusFilter, key];
+  const getActiveKey = () => {
+    if (includeArchived && includeDrafts) {
+      return DocumentType.All;
     }
 
-    onSelect({ statusFilter: modifiedStatusFilter });
+    if (includeDrafts) {
+      return DocumentType.Active;
+    }
+
+    return DocumentType.Published;
+  };
+
+  const handleSelect = (key: DocumentType) => {
+    switch (key) {
+      case DocumentType.Published:
+        return onSelect({ includeArchived: false, includeDrafts: false });
+      case DocumentType.Active:
+        return onSelect({ includeArchived: false, includeDrafts: true });
+      case DocumentType.All:
+        return onSelect({ includeArchived: true, includeDrafts: true });
+      default:
+        onSelect({ includeArchived: false, includeDrafts: false });
+    }
   };
 
   return (
     <FilterOptions
       options={options}
-      selectedKeys={statusFilter}
+      activeKey={getActiveKey()}
       onSelect={handleSelect}
-      defaultLabel={t("Any status")}
+      defaultLabel={t("Document type")}
     />
   );
 };

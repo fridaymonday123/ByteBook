@@ -19,14 +19,8 @@ type Props = {
   transaction: Transaction;
 };
 
-function getKeyForFileOp(
-  teamId: string,
-  format: FileOperationFormat,
-  name: string
-) {
-  return `${
-    Buckets.uploads
-  }/${teamId}/${uuidv4()}/${name}-export.${format.replace(/outline-/, "")}.zip`;
+function getKeyForFileOp(teamId: string, name: string) {
+  return `${Buckets.uploads}/${teamId}/${uuidv4()}/${name}-export.zip`;
 }
 
 async function collectionExporter({
@@ -39,11 +33,7 @@ async function collectionExporter({
   transaction,
 }: Props) {
   const collectionId = collection?.id;
-  const key = getKeyForFileOp(
-    user.teamId,
-    format,
-    collection?.name || team.name
-  );
+  const key = getKeyForFileOp(user.teamId, collection?.name || team.name);
   const fileOperation = await FileOperation.create(
     {
       type: FileOperationType.Export,

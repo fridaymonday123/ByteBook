@@ -1,5 +1,5 @@
 import Logger from "@server/logging/Logger";
-import { setResource, addTags } from "@server/logging/tracer";
+import { setResource } from "@server/logging/tracer";
 import { traceFunction } from "@server/logging/tracing";
 import HealthMonitor from "@server/queues/HealthMonitor";
 import { initI18n } from "@server/utils/i18n";
@@ -88,7 +88,6 @@ export default function init() {
         const ProcessorClass = processors[name];
 
         setResource(`Processor.${name}`);
-        addTags({ event });
 
         if (!ProcessorClass) {
           throw new Error(
@@ -132,7 +131,6 @@ export default function init() {
         const TaskClass = tasks[name];
 
         setResource(`Task.${name}`);
-        addTags({ props });
 
         if (!TaskClass) {
           throw new Error(
@@ -145,7 +143,7 @@ export default function init() {
         const task = new TaskClass();
 
         try {
-          return await task.perform(props);
+          await task.perform(props);
         } catch (err) {
           Logger.error(`Error processing task in ${name}`, err, props);
           throw err;

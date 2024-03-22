@@ -1,10 +1,9 @@
-import type { Unfurl } from "@shared/types";
 import { Day } from "@shared/utils/time";
+import env from "@server/env";
 import { InternalError } from "@server/errors";
 import Logger from "@server/logging/Logger";
 import Redis from "@server/storage/redis";
 import fetch from "@server/utils/fetch";
-import env from "./env";
 
 class Iframely {
   private static apiUrl = `${env.IFRAMELY_URL}/api`;
@@ -34,7 +33,7 @@ class Iframely {
     }
   }
 
-  public static async fetch(url: string, type = "oembed") {
+  private static async fetch(url: string, type = "oembed") {
     const res = await fetch(
       `${this.apiUrl}/${type}?url=${encodeURIComponent(url)}&api_key=${
         this.apiKey
@@ -56,19 +55,20 @@ class Iframely {
   }
 
   /**
-   * Fetches the preview data for the given url using Iframely oEmbed API
+   * Fetches the preview data for the given url
+   * using Iframely oEmbed API
    *
    * @param url
    * @returns Preview data for the url
    */
-  public static async get(url: string): Promise<Unfurl | false> {
+  public static async get(url: string) {
     try {
-      const cached = await Iframely.cached(url);
+      const cached = await this.cached(url);
       if (cached) {
         return cached;
       }
-      const res = await Iframely.fetch(url);
-      await Iframely.cache(url, res);
+      const res = await this.fetch(url);
+      await this.cache(url, res);
       return res;
     } catch (err) {
       throw InternalError(err);

@@ -13,6 +13,6 @@ export default class EventsStore extends Store<Event> {
 
   @computed
   get orderedData(): Event[] {
-    return orderBy(Array.from(this.data.values()), "createdAt", "desc");
+    return orderBy(Array.from(this.data.values()), "createdAt", "asc");
   }
 }

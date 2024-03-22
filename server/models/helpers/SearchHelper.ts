@@ -4,7 +4,7 @@ import find from "lodash/find";
 import map from "lodash/map";
 import queryParser from "pg-tsquery";
 import { Op, Sequelize, WhereOptions } from "sequelize";
-import { DateFilter, StatusFilter } from "@shared/types";
+import { DateFilter } from "@shared/types";
 import Collection from "@server/models/Collection";
 import Document from "@server/models/Document";
 import Share from "@server/models/Share";
@@ -36,10 +36,12 @@ type SearchOptions = {
   share?: Share;
   /** Limit results to a date range. */
   dateFilter?: DateFilter;
-  /** Status of the documents to return */
-  statusFilter?: StatusFilter[];
   /** Limit results to a list of users that collaborated on the document. */
   collaboratorIds?: string[];
+  /** Include archived documents in the results */
+  includeArchived?: boolean;
+  /** Include draft documents in the results (will only ever return your own) */
+  includeDrafts?: boolean;
   /** The minimum number of words to be returned in the contextual snippet */
   snippetMinWords?: number;
   /** The maximum number of words to be returned in the contextual snippet */
@@ -72,10 +74,7 @@ export default class SearchHelper {
       offset = 0,
     } = options;
 
-    const where = await this.buildWhere(team, {
-      ...options,
-      statusFilter: [...(options.statusFilter || []), StatusFilter.Published],
-    });
+    const where = await this.buildWhere(team, options);
 
     if (options.share?.includeChildDocuments) {
       const sharedDocument = await options.share.$get("document");
@@ -357,56 +356,33 @@ export default class SearchHelper {
       });
     }
 
-    const statusQuery = [];
-    if (options.statusFilter?.includes(StatusFilter.Published)) {
-      statusQuery.push({
-        [Op.and]: [
-          {
-            publishedAt: {
-              [Op.ne]: null,
-            },
-            archivedAt: {
-              [Op.eq]: null,
-            },
-          },
-        ],
-      });
-    }
-
-    if (
-      options.statusFilter?.includes(StatusFilter.Draft) &&
-      // Only ever include draft results for the user's own documents
-      model instanceof User
-    ) {
-      statusQuery.push({
-        [Op.and]: [
-          {
-            publishedAt: {
-              [Op.eq]: null,
-            },
-            archivedAt: {
-              [Op.eq]: null,
-            },
-            [Op.or]: [
-              { createdById: model.id },
-              { "$memberships.id$": { [Op.ne]: null } },
-            ],
-          },
-        ],
-      });
-    }
-
-    if (options.statusFilter?.includes(StatusFilter.Archived)) {
-      statusQuery.push({
+    if (!options.includeArchived) {
+      where[Op.and].push({
         archivedAt: {
-          [Op.ne]: null,
+          [Op.eq]: null,
         },
       });
     }
 
-    if (statusQuery.length) {
+    if (options.includeDrafts && model instanceof User) {
       where[Op.and].push({
-        [Op.or]: statusQuery,
+        [Op.or]: [
+          {
+            publishedAt: {
+              [Op.ne]: null,
+            },
+          },
+          {
+            createdById: model.id,
+          },
+          { "$memberships.id$": { [Op.ne]: null } },
+        ],
+      });
+    } else {
+      where[Op.and].push({
+        publishedAt: {
+          [Op.ne]: null,
+        },
       });
     }
 

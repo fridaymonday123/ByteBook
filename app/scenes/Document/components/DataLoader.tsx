@@ -122,7 +122,7 @@ function DataLoader({ match, children }: Props) {
 
   React.useEffect(() => {
     async function fetchSubscription() {
-      if (document?.id && !document?.isDeleted && !revisionId) {
+      if (document?.id && !revisionId) {
         try {
           await subscriptions.fetchPage({
             documentId: document.id,
@@ -134,7 +134,7 @@ function DataLoader({ match, children }: Props) {
       }
     }
     void fetchSubscription();
-  }, [document?.id, document?.isDeleted, subscriptions, revisionId]);
+  }, [document?.id, subscriptions, revisionId]);
 
   React.useEffect(() => {
     async function fetchViews() {

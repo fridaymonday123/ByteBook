@@ -63,7 +63,7 @@ function Preferences() {
               Choose the interface language. Community translations are accepted
               though our{" "}
               <a
-                href="https://translate.bytebook.ai"
+                href="https://translate.richbook.ai"
                 target="_blank"
                 rel="noreferrer"
               >

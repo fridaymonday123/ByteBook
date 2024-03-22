@@ -8,7 +8,6 @@ import send from "koa-send";
 import userAgent, { UserAgentContext } from "koa-useragent";
 import { languages } from "@shared/i18n";
 import { IntegrationType, TeamPreference } from "@shared/types";
-import { Day } from "@shared/utils/time";
 import env from "@server/env";
 import { NotFoundError } from "@server/errors";
 import shareDomains from "@server/middlewares/shareDomains";
@@ -34,7 +33,7 @@ router.use(["/images/*", "/email/*", "/fonts/*"], async (ctx, next) => {
       done = await send(ctx, ctx.path, {
         root: path.resolve(__dirname, "../../../public"),
         // 7 day expiry, these assets are mostly static but do not contain a hash
-        maxAge: Day * 7,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
         setHeaders: (res) => {
           res.setHeader("Access-Control-Allow-Origin", "*");
         },
@@ -70,7 +69,7 @@ if (env.isProduction) {
       await send(ctx, pathname, {
         root: path.join(__dirname, "../../app/"),
         // Hashed static assets get 1 year expiry plus immutable flag
-        maxAge: Day * 365,
+        maxAge: 365 * 24 * 60 * 60 * 1000,
         immutable: true,
         setHeaders: (res) => {
           res.setHeader("Service-Worker-Allowed", "/");
@@ -104,7 +103,7 @@ router.get("/locales/:lng.json", async (ctx) => {
   await send(ctx, path.join(lng, "translation.json"), {
     setHeaders: (res, _, stats) => {
       res.setHeader("Last-Modified", formatRFC7231(stats.mtime));
-      res.setHeader("Cache-Control", `public, max-age=${(7 * Day) / 1000}`);
+      res.setHeader("Cache-Control", `public, max-age=${7 * 24 * 60 * 60}`);
       res.setHeader(
         "ETag",
         crypto.createHash("md5").update(stats.mtime.toISOString()).digest("hex")
@@ -120,7 +119,7 @@ router.get("/robots.txt", (ctx) => {
 
 router.get("/opensearch.xml", (ctx) => {
   ctx.type = "text/xml";
-  ctx.response.set("Cache-Control", `public, max-age=${(7 * Day) / 1000}`);
+
   ctx.body = opensearchResponse(ctx.request.URL.origin);
 });
 

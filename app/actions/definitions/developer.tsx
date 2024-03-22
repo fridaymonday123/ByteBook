@@ -8,8 +8,6 @@ import env from "~/env";
 import { client } from "~/utils/ApiClient";
 import Logger from "~/utils/Logger";
 import { deleteAllDatabases } from "~/utils/developer";
-import history from "~/utils/history";
-import { homePath } from "~/utils/routeHelpers";
 
 export const copyId = createAction({
   name: ({ t }) => t("Copy ID"),
@@ -69,22 +67,21 @@ export const copyId = createAction({
         name: "Copy Release ID",
         icon: <CopyIcon />,
         section: DeveloperSection,
-        visible: () => !!env.VERSION,
-        perform: () => copyAndToast(env.VERSION),
+        visible: () => !!env.RELEASE,
+        perform: () => copyAndToast(env.RELEASE),
       }),
     ];
   },
 });
 
 export const clearIndexedDB = createAction({
-  name: ({ t }) => t("Clear IndexedDB cache"),
+  name: ({ t }) => t("Delete IndexedDB cache"),
   icon: <TrashIcon />,
   keywords: "cache clear database",
   section: DeveloperSection,
   perform: async ({ t }) => {
-    history.push(homePath());
     await deleteAllDatabases();
-    toast.success(t("IndexedDB cache cleared"));
+    toast.message(t("IndexedDB cache deleted"));
   },
 });
 

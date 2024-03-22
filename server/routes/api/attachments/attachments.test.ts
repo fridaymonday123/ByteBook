@@ -66,7 +66,7 @@ describe("#attachments.create", () => {
           name: "test.zip",
           contentType: "application/zip",
           size: 10000,
-          preset: AttachmentPreset.WorkspaceImport,
+          preset: AttachmentPreset.Import,
           token: user.getJwtToken(),
         },
       });

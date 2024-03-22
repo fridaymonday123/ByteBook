@@ -6,7 +6,6 @@ export default function presentEvent(event: Event, isAdmin = false) {
     id: event.id,
     name: event.name,
     modelId: event.modelId,
-    userId: event.userId,
     actorId: event.actorId,
     actorIpAddress: event.ip || undefined,
     collectionId: event.collectionId,

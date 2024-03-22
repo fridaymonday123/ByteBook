@@ -61,12 +61,8 @@ export default class Code extends Mark {
   }
 
   get plugins() {
-    const codeCursorPlugin = codemark({
-      markType: this.editor.schema.marks.code_inline,
-    })[0];
-
     return [
-      codeCursorPlugin,
+      ...codemark({ markType: this.editor.schema.marks.code_inline }),
       new Plugin({
         props: {
           // Typing a character inside of two backticks will wrap the character

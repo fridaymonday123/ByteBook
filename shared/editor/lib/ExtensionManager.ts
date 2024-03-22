@@ -134,7 +134,7 @@ export default class ExtensionManager {
     plugins,
   }: {
     schema: Schema;
-    rules?: markdownit.Options;
+    rules?: Record<string, any>;
     plugins?: PluginSimple[];
   }): MarkdownParser {
     const tokens = this.extensions

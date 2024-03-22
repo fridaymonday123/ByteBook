@@ -18,9 +18,9 @@ export function CannotUseWithout(
       options: validationOptions,
       validator: {
         validate<T>(value: T, args: ValidationArguments) {
-          const obj = args.object as unknown as T;
+          const object = args.object as unknown as T;
           const required = args.constraints[0] as string;
-          return obj[required] !== undefined;
+          return object[required] !== undefined;
         },
         defaultMessage(args: ValidationArguments) {
           return `${propertyName} cannot be used without ${args.constraints[0]}.`;

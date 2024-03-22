@@ -1,10 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { addMinutes, subDays } from "date-fns";
-import {
-  CollectionPermission,
-  DocumentPermission,
-  StatusFilter,
-} from "@shared/types";
+import { CollectionPermission, DocumentPermission } from "@shared/types";
 import {
   Document,
   View,
@@ -1108,7 +1104,7 @@ describe("#documents.search_titles", () => {
       body: {
         token: member.getJwtToken(),
         query: "title",
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
       },
     });
     const body = await res.json();
@@ -1219,7 +1215,7 @@ describe("#documents.search_titles", () => {
       body: {
         token: user.getJwtToken(),
         query: "SECRET",
-        statusFilter: [StatusFilter.Archived],
+        includeArchived: true,
       },
     });
     const body = await res.json();
@@ -1239,7 +1235,7 @@ describe("#documents.search_titles", () => {
       body: {
         token: user.getJwtToken(),
         query: "SECRET",
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
       },
     });
     const body = await res.json();
@@ -1286,7 +1282,6 @@ describe("#documents.search_titles", () => {
       body: {
         token: user.getJwtToken(),
         query: "SECRET",
-        statusFilter: [StatusFilter.Published, StatusFilter.Draft],
       },
     });
     const body = await res.json();
@@ -1376,7 +1371,7 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         shareId: share.id,
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
         query: "test",
       },
     });
@@ -1545,7 +1540,6 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         query: "search term",
-        statusFilter: [StatusFilter.Published, StatusFilter.Archived],
       },
     });
     const body = await res.json();
@@ -1580,7 +1574,7 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         query: "search term",
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
       },
     });
     const body = await res.json();
@@ -1601,7 +1595,7 @@ describe("#documents.search", () => {
     const res = await server.post("/api/documents.search", {
       body: {
         token: user.getJwtToken(),
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
         query: "text",
       },
     });
@@ -1622,7 +1616,7 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         query: "search term",
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
       },
     });
     const body = await res.json();
@@ -1642,7 +1636,6 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         query: "search term",
-        statusFilter: [StatusFilter.Published, StatusFilter.Draft],
       },
     });
     const body = await res.json();
@@ -1662,7 +1655,7 @@ describe("#documents.search", () => {
       body: {
         token: user.getJwtToken(),
         query: "search term",
-        statusFilter: [StatusFilter.Archived],
+        includeArchived: true,
       },
     });
     const body = await res.json();
@@ -1906,7 +1899,7 @@ describe("#documents.search", () => {
       body: {
         token: member.getJwtToken(),
         query: "title",
-        statusFilter: [StatusFilter.Draft],
+        includeDrafts: true,
       },
     });
     const body = await res.json();
@@ -3039,7 +3032,6 @@ describe("#documents.update", () => {
         id: document.id,
         title: "Updated title",
         text: "Updated text",
-        publish: true,
       },
     });
     const body = await res.json();

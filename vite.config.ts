@@ -2,15 +2,20 @@ import fs from "fs";
 import path from "path";
 import react from "@vitejs/plugin-react";
 import browserslistToEsbuild from "browserslist-to-esbuild";
+import dotenv from "dotenv";
 import { webpackStats } from "rollup-plugin-webpack-stats";
 import { CommonServerOptions, defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import environment from "./server/utils/environment";
+
+// Load the process environment variables
+dotenv.config({
+  silent: true,
+});
 
 let httpsConfig: CommonServerOptions["https"] | undefined;
 
-if (environment.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "development") {
   try {
     httpsConfig = {
       key: fs.readFileSync("./server/config/certs/private.key"),
@@ -26,13 +31,13 @@ export default () =>
   defineConfig({
     root: "./",
     publicDir: "./server/static",
-    base: (environment.CDN_URL ?? "") + "/static/",
+    base: (process.env.CDN_URL ?? "") + "/static/",
     server: {
       port: 3001,
       host: true,
       https: httpsConfig,
       fs:
-        environment.NODE_ENV === "development"
+        process.env.NODE_ENV === "development"
           ? {
               // Allow serving files from one level up to the project root
               allow: [".."],
@@ -86,7 +91,7 @@ export default () =>
           globPatterns: ["**/*.{js,css,ico,png,svg}"],
           navigateFallback: null,
           modifyURLPrefix: {
-            "": `${environment.CDN_URL ?? ""}/static/`,
+            "": `${process.env.CDN_URL ?? ""}/static/`,
           },
           runtimeCaching: [
             {
@@ -106,8 +111,8 @@ export default () =>
           ],
         },
         manifest: {
-          name: "ByteBook",
-          short_name: "ByteBook",
+          name: "Outline",
+          short_name: "Outline",
           theme_color: "#fff",
           background_color: "#fff",
           start_url: "/",
@@ -119,18 +124,18 @@ export default () =>
           // pixel-perfection, provide icons in increments of 48dp.
           icons: [
             {
-              src: "/static/images/icon-192.png",
+              src: "/static/images/eye-192.png",
               sizes: "192x192",
               type: "image/png",
             },
             {
-              src: "/static/images/icon-512.png",
+              src: "/static/images/eye-512.png",
               sizes: "512x512",
               type: "image/png",
             },
             // last one duplicated for purpose: 'any maskable'
             {
-              src: "/static/images/icon-512.png",
+              src: "/static/images/eye-512.png",
               sizes: "512x512",
               type: "image/png",
               purpose: "any maskable",

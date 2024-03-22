@@ -19,9 +19,9 @@ export default function fetch(
 ): Promise<Response> {
   // In self-hosted, webhooks support proxying and are also allowed to connect
   // to internal services, so use fetchWithProxy without the filtering agent.
-  const fetchMethod = env.isCloudHosted ? nodeFetch : fetchWithProxy;
+  const fetch = env.isCloudHosted ? nodeFetch : fetchWithProxy;
 
-  return fetchMethod(url, {
+  return fetch(url, {
     ...init,
     agent: env.isCloudHosted ? useAgent(url) : undefined,
   });

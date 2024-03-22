@@ -43,7 +43,7 @@ function UserFilter(props: Props) {
   return (
     <FilterOptions
       options={options}
-      selectedKeys={[userId]}
+      activeKey={userId}
       onSelect={onSelect}
       defaultLabel={t("Any author")}
       selectedPrefix={`${t("Author")}:`}

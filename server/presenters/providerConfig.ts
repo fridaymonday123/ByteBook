@@ -1,8 +1,8 @@
 import { signin } from "@shared/utils/routeHelpers";
-import { Plugin, PluginType } from "@server/utils/PluginManager";
+import { AuthenticationProviderConfig } from "@server/models/helpers/AuthenticationHelper";
 
 export default function presentProviderConfig(
-  config: Plugin<PluginType.AuthProvider>
+  config: AuthenticationProviderConfig
 ) {
   return {
     id: config.id,

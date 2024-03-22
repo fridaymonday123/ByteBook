@@ -9,7 +9,7 @@ const Section = styled(Flex)`
   flex-shrink: 0;
 
   &:first-child {
-    margin-top: 12px;
+    margin-top: 20px;
   }
 
   &:empty {

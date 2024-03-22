@@ -15,7 +15,7 @@ describe("isUrl", () => {
     expect(urlsUtils.isUrl("https://www.example.com")).toBe(true);
     expect(urlsUtils.isUrl("seafile://openfile")).toBe(true);
     expect(urlsUtils.isUrl("figma://launch")).toBe(true);
-    expect(urlsUtils.isUrl("bytebook:https://bytebook.ai")).toBe(true);
+    expect(urlsUtils.isUrl("richbook:https://richbook.ai)).toBe(true);
   });
 });
 
@@ -27,7 +27,7 @@ describe("isBase64Url", () => {
     expect(urlsUtils.isBase64Url("https://www.example.com")).toBe(false);
     expect(urlsUtils.isBase64Url("seafile://openfile")).toBe(false);
     expect(urlsUtils.isBase64Url("figma://launch")).toBe(false);
-    expect(urlsUtils.isBase64Url("bytebook:https://bytebook.ai")).toBe(false);
+    expect(urlsUtils.isBase64Url("richbook:https://richbook.ai")).toBe(false);
     expect(urlsUtils.isBase64Url("://")).toBe(false);
   });
 
@@ -86,34 +86,34 @@ describe("sanitizeUrl", () => {
       expect(urlsUtils.sanitizeUrl("#home")).toEqual("#home");
     });
     it("should return the url as it's if it's mailto:", () => {
-      expect(urlsUtils.sanitizeUrl("mailto:bytebook@bytebook.ai")).toEqual(
-        "mailto:bytebook@bytebook.ai"
+      expect(urlsUtils.sanitizeUrl("mailto:richbook@richbook.ai")).toEqual(
+        "mailto:richbook@richbook.ai"
       );
     });
     it("should return the url as it's if it's mailto:", () => {
-      expect(urlsUtils.sanitizeUrl("mailto:bytebook@bytebook.ai")).toEqual(
-        "mailto:bytebook@bytebook.ai"
+      expect(urlsUtils.sanitizeUrl("mailto:richbook@richbook.ai")).toEqual(
+        "mailto:richbook@richbook.ai"
       );
     });
     it("should return the url as it's if it's sms:, fax:, tel:", () => {
-      expect(urlsUtils.sanitizeUrl("mailto:bytebook@bytebook.ai")).toEqual(
-        "mailto:bytebook@bytebook.ai"
+      expect(urlsUtils.sanitizeUrl("mailto:richbook@richbook.ai")).toEqual(
+        "mailto:richbook@richbook.ai"
       );
       expect(urlsUtils.sanitizeUrl("tel:0123456789")).toEqual("tel:0123456789");
       expect(urlsUtils.sanitizeUrl("fax:0123456789")).toEqual("fax:0123456789");
       expect(urlsUtils.sanitizeUrl("sms:0123456789")).toEqual("sms:0123456789");
     });
     it("should return the url as it's if it's a special protocol", () => {
-      expect(urlsUtils.sanitizeUrl("mqtt://bytebook.ai")).toEqual(
-        "mqtt://bytebook.ai"
+      expect(urlsUtils.sanitizeUrl("mqtt://richbook.ai")).toEqual(
+        "mqtt://richbook.ai"
       );
     });
   });
 
   describe("Blocked protocols", () => {
     it("should be sanitized", () => {
-      expect(urlsUtils.sanitizeUrl("file://localhost.com/bytebook.txt")).toEqual(
-        "https://file://localhost.com/bytebook.txt"
+      expect(urlsUtils.sanitizeUrl("file://localhost.com/richbook.txt")).toEqual(
+        "https://file://localhost.com/richbook.txt"
       );
       expect(urlsUtils.sanitizeUrl("javascript:whatever")).toEqual(
         "https://javascript:whatever"

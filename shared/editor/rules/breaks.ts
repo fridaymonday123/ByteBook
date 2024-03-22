@@ -11,6 +11,7 @@ function isHardbreak(token: Token) {
 export default function markdownBreakToParagraphs(md: MarkdownIt) {
   // insert a new rule after the "inline" rules are parsed
   md.core.ruler.after("inline", "breaks", (state) => {
+    const { Token } = state;
     const tokens = state.tokens;
 
     // work backwards through the tokens and find text that looks like a br
@@ -29,8 +30,8 @@ export default function markdownBreakToParagraphs(md: MarkdownIt) {
           count++;
         }
 
-        for (let j = 0; j < count; j++) {
-          const isLast = j === count - 1;
+        for (let i = 0; i < count; i++) {
+          const isLast = i === count - 1;
 
           token = new Token("paragraph_open", "p", 1);
           nodes.push(token);

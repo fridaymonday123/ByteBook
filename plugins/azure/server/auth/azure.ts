@@ -6,6 +6,7 @@ import Router from "koa-router";
 import { Profile } from "passport";
 import { slugifyDomain } from "@shared/utils/domains";
 import accountProvisioner from "@server/commands/accountProvisioner";
+import env from "@server/env";
 import { MicrosoftGraphError } from "@server/errors";
 import passportMiddleware from "@server/middlewares/passport";
 import { User } from "@server/models";
@@ -16,10 +17,9 @@ import {
   getTeamFromContext,
   getClientFromContext,
 } from "@server/utils/passport";
-import config from "../../plugin.json";
-import env from "../env";
 
 const router = new Router();
+const providerName = "azure";
 const scopes: string[] = [];
 
 if (env.AZURE_CLIENT_ID && env.AZURE_CLIENT_SECRET) {
@@ -109,7 +109,7 @@ if (env.AZURE_CLIENT_ID && env.AZURE_CLIENT_SECRET) {
             avatarUrl: profile.picture,
           },
           authenticationProvider: {
-            name: config.id,
+            name: providerName,
             providerId: profile.tid,
           },
           authentication: {
@@ -127,11 +127,13 @@ if (env.AZURE_CLIENT_ID && env.AZURE_CLIENT_SECRET) {
     }
   );
   passport.use(strategy);
+
   router.get(
-    config.id,
-    passport.authenticate(config.id, { prompt: "select_account" })
+    "azure",
+    passport.authenticate(providerName, { prompt: "select_account" })
   );
-  router.get(`${config.id}.callback`, passportMiddleware(config.id));
+
+  router.get("azure.callback", passportMiddleware(providerName));
 }
 
 export default router;
