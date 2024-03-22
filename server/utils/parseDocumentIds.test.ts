@@ -7,7 +7,7 @@ it("should not return non links", () => {
 it("should return an array of document ids", () => {
   const result = parseDocumentIds(`# Header
   
-  [internal](http://app.bytebook.ai/doc/test-456733)
+  [internal](http://app.getoutline.com/doc/test-456733)
 
   More text 
 
@@ -21,7 +21,7 @@ it("should return an array of document ids", () => {
 it("should return deeply nested link document ids", () => {
   const result = parseDocumentIds(`# Header
   
-  [internal](http://app.bytebook.ai/doc/test-456733)
+  [internal](http://app.getoutline.com/doc/test-456733)
 
   More text 
 

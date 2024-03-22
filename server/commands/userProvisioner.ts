@@ -102,7 +102,7 @@ export default async function userProvisioner({
 
     // We found an authentication record, but the associated user was deleted or
     // otherwise didn't exist. Cleanup the auth record and proceed with creating
-    // a new user. See: https://github.com/fridaymonday123/ByteBook/issues/2022
+    // a new user. See: https://github.com/outline/outline/issues/2022
     await auth.destroy();
   }
 

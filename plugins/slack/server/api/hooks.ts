@@ -44,7 +44,7 @@ function verifySlackToken(token: string) {
   }
 }
 
-// triggered by a user posting a bytebook.ai link in Slack
+// triggered by a user posting a getoutline.com link in Slack
 router.post(
   "hooks.unfurl",
   validate(T.HooksUnfurlSchema),
@@ -184,7 +184,7 @@ router.post(
   }
 );
 
-// triggered by the /ByteBook command in Slack
+// triggered by the /outline command in Slack
 router.post(
   "hooks.slack",
   validate(T.HooksSlackCommandSchema),
@@ -259,7 +259,7 @@ router.post(
       ctx.body = {
         response_type: "ephemeral",
         text: t("How to use {{ command }}", {
-          command: "/ByteBook",
+          command: "/outline",
           ...opts(user),
         }),
         attachments: [
@@ -267,8 +267,8 @@ router.post(
             text: t(
               "To search your workspace use {{ command }}. \nType {{ command2 }} help to display this help text.",
               {
-                command: `/ByteBook keyword`,
-                command2: `/ByteBook help`,
+                command: `/outline keyword`,
+                command2: `/outline help`,
                 ...opts(user),
               }
             ),

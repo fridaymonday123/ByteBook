@@ -64,7 +64,7 @@ export async function printEnv() {
     Logger.info(
       "lifecycle",
       chalk.green(`
-Is your team enjoying ByteBook? Consider supporting future development by sponsoring the project:\n\nhttps://github.com/sponsors/ByteBook
+Is your team enjoying Outline? Consider supporting future development by sponsoring the project:\n\nhttps://github.com/sponsors/outline
 `)
     );
   } else if (env.isDevelopment) {

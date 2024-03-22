@@ -25,7 +25,7 @@ export default function BackButton({ config }: Props) {
   }
 
   return (
-    <Link href={isSubdomain ? env.URL : "https://www.bytebook.ai"}>
+    <Link href={isSubdomain ? env.URL : "https://www.getoutline.com"}>
       <BackIcon /> {Desktop.isElectron() ? t("Back") : t("Back to home")}
     </Link>
   );

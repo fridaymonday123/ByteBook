@@ -475,7 +475,7 @@ export default class SearchHelper {
         // see: https://github.com/sequelize/sequelize/issues/2950
         .replace(/\\/g, "\\\\")
         // replace ":" with escaped "\:" because it's a reserved character in tsquery
-        // see: https://github.com/fridaymonday123/ByteBook/issues/6542
+        // see: https://github.com/outline/outline/issues/6542
         .replace(/:/g, "\\:")
     );
   }

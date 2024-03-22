@@ -240,7 +240,7 @@ export class Environment {
   public SSL_CERT = this.toOptionalString(environment.SSL_CERT);
 
   /**
-   * The default interface language. See translate.bytebook.ai for a list of
+   * The default interface language. See translate.getoutline.com for a list of
    * available language codes and their percentage translated.
    */
   @Public
@@ -520,7 +520,7 @@ export class Environment {
    */
   public FILE_STORAGE_LOCAL_ROOT_DIR =
     this.toOptionalString(environment.FILE_STORAGE_LOCAL_ROOT_DIR) ??
-    "/var/lib/bytebook/data";
+    "/var/lib/outline/data";
 
   /**
    * Set max allowed upload size for file attachments.
@@ -581,14 +581,7 @@ export class Environment {
   public DEVELOPMENT_UNSAFE_INLINE_CSP = this.toBoolean(
     environment.DEVELOPMENT_UNSAFE_INLINE_CSP ?? "false"
   );
-  
-    /**
-  * This is used to verify webhook requests received from Slack.
-  */
-    @IsOptional()
-    public GTP_RESEARCH_URL = process.env.GTP_RESEARCH_URL ?? "";
-  
-  
+
   /**
    * The product name
    */
@@ -602,7 +595,8 @@ export class Environment {
   public get isCloudHosted() {
     return [
       "https://app.bytebook.ai",
-      "https://app.bytebook.ai:3000",
+      "https://app.outline.dev",
+      "https://app.outline.dev:3000",
     ].includes(this.URL);
   }
 

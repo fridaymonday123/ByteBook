@@ -60,7 +60,7 @@ const ContentEditable = React.forwardRef(function _ContentEditable(
     focus: () => {
       if (contentRef.current) {
         contentRef.current.focus();
-        // looks unnecessary but required because of https://github.com/fridaymonday123/ByteBook/issues/5198
+        // looks unnecessary but required because of https://github.com/outline/outline/issues/5198
         if (!contentRef.current.innerText) {
           placeCaret(contentRef.current, true);
         }

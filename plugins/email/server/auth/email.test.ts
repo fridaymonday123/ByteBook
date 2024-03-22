@@ -37,7 +37,7 @@ describe("email", () => {
         email: user.email,
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
     const body = await res.json();
@@ -71,7 +71,7 @@ describe("email", () => {
         email: user.email,
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
     const body = await res.json();
@@ -91,7 +91,7 @@ describe("email", () => {
         email: user.email,
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
 
@@ -114,7 +114,7 @@ describe("email", () => {
         email: user.email,
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
     const body = await res.json();
@@ -133,7 +133,7 @@ describe("email", () => {
         email: "user@example.com",
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
     const body = await res.json();
@@ -163,7 +163,7 @@ describe("email", () => {
           email,
         },
         headers: {
-          host: `${subdomain}.bytebook.ai`,
+          host: `${subdomain}.outline.dev`,
         },
       });
       const body = await res.json();
@@ -192,7 +192,7 @@ describe("email", () => {
           email,
         },
         headers: {
-          host: `${subdomain}.bytebook.ai`,
+          host: `${subdomain}.outline.dev`,
         },
       });
       const body = await res.json();

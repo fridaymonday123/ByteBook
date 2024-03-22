@@ -123,7 +123,7 @@ if (
             ip: ctx.ip,
             team: {
               teamId: team?.id,
-              // https://github.com/fridaymonday123/ByteBook/pull/2388#discussion_r681120223
+              // https://github.com/outline/outline/pull/2388#discussion_r681120223
               name: "Wiki",
               domain,
               subdomain,

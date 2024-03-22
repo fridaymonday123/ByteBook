@@ -80,7 +80,7 @@ function Slack() {
         <Trans
           defaults="Get rich previews of {{ appName }} links shared in Slack and use the <em>{{ command }}</em> slash command to search for documents without leaving your chat."
           values={{
-            command: "/ByteBook",
+            command: "/outline",
             appName,
           }}
           components={{

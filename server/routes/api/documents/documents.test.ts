@@ -1349,7 +1349,7 @@ describe("#documents.search", () => {
         shareId: "abc123",
       },
       headers: {
-        host: `${subdomain}.bytebook.ai`,
+        host: `${subdomain}.outline.dev`,
       },
     });
 

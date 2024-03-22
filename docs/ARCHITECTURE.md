@@ -26,7 +26,7 @@ app
 The API server is driven by [Koa](http://koajs.com/), it uses [Sequelize](http://docs.sequelizejs.com/) as the ORM and Redis with [Bull](https://github.com/OptimalBits/bull) for queues and async event management. Authorization logic
 is contained in [cancan](https://www.npmjs.com/package/cancan) policies under the "policies" directory.
 
-Interested in more documentation on the API routes? Check out the [API documentation](https://bytebook.ai/developers).
+Interested in more documentation on the API routes? Check out the [API documentation](https://getoutline.com/developers).
 
 ```
 server

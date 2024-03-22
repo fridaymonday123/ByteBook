@@ -26,7 +26,7 @@ function getKeyForFileOp(
 ) {
   return `${
     Buckets.uploads
-  }/${teamId}/${uuidv4()}/${name}-export.${format.replace(/ByteBook-/, "")}.zip`;
+  }/${teamId}/${uuidv4()}/${name}-export.${format.replace(/outline-/, "")}.zip`;
 }
 
 async function collectionExporter({
