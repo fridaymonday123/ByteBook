@@ -729,7 +729,7 @@ export class Environment {
   /**
    * The product name
    */
-    public APP_NAME = "RichBook";
+    public APP_NAME = "ByteBook";
 
   /**
    * Returns true if the current installation is the cloud hosted version at

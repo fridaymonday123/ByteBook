@@ -29,23 +29,23 @@ export function githubUrl(): string {
 }
 
 export function githubIssuesUrl(): string {
-  return "https://www.github.com/fridaymonday123/RichBook/issues";
+  return "https://www.github.com/fridaymonday123/ByteBook/issues";
 }
 
 export function twitterUrl(): string {
-  return "https://twitter.com/richbook";
+  return "https://twitter.com/bytebook";
 }
 
 export function feedbackUrl(): string {
-  return "https://www.richbook.ai/contact";
+  return "https://www.bytebook.ai/contact";
 }
 
 export function developersUrl(): string {
-  return "https://www.richbook.ai/developers";
+  return "https://www.bytebook.ai/developers";
 }
 
 export function changelogUrl(): string {
-  return "https://www.richbook.ai/changelog";
+  return "https://www.bytebook.ai/changelog";
 }
 
 export const SLUG_URL_REGEX = /^(?:[0-9a-zA-Z-_~]*-)?([a-zA-Z0-9]{10,15})$/;

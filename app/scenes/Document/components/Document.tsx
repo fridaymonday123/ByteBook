@@ -550,7 +550,7 @@ class DocumentScene extends React.Component<Props> {
             {isShare &&
               !parseDomain(window.location.origin).custom &&
               !auth.user && (
-                <Branding href="//www.richbook.ai" />
+                <Branding href="//www.bytebook.ai" />
               )}
           </Container>
           {!isShare && (
