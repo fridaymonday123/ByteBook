@@ -14,19 +14,19 @@
   <a href="https://translate.bytebook.ai/project/bytebook" alt="Localized"><img src="https://badges.crowdin.net/outline/localized.svg"></a>
 </p>
 
-This is the source code that runs [**Outline**](https://www.bytebook.ai) and all the associated services. If you want to use Outline then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
+This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use ByteBook then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
 
-If you'd like to run your own copy of Outline or contribute to development then this is the place for you.
+If you'd like to run your own copy of ByteBook or contribute to development then this is the place for you.
 
 # Installation
 
-Please see the [documentation](https://docs.bytebook.ai/s/hosting/) for running your own copy of Outline in a production configuration.
+Please see the [documentation](https://docs.bytebook.ai/s/hosting/) for running your own copy of ByteBook in a production configuration.
 
 If you have questions or improvements for the docs please create a thread in [GitHub discussions](https://github.com/fridaymonday123/ByteBook/discussions).
 
 # Development
 
-There is a short guide for [setting up a development environment](https://docs.bytebook.ai/s/hosting/doc/local-development-5hEhFRXow7) if you wish to contribute changes, fixes, and improvements to Outline.
+There is a short guide for [setting up a development environment](https://docs.bytebook.ai/s/hosting/doc/local-development-5hEhFRXow7) if you wish to contribute changes, fixes, and improvements to ByteBook.
 
 ## Contributing
 
@@ -49,7 +49,7 @@ please refer to the [architecture document](docs/ARCHITECTURE.md) first for a hi
 
 ## Debugging
 
-In development Outline outputs simple logging to the console, prefixed by categories. In production it outputs JSON logs, these can be easily parsed by your preferred log ingestion pipeline.
+In development ByteBook outputs simple logging to the console, prefixed by categories. In production it outputs JSON logs, these can be easily parsed by your preferred log ingestion pipeline.
 
 HTTP logging is disabled by default, but can be enabled by setting the `DEBUG=http` environment variable.
 
