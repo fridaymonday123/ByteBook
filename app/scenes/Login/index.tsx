@@ -15,7 +15,7 @@ import ChangeLanguage from "~/components/ChangeLanguage";
 import Fade from "~/components/Fade";
 import Flex from "~/components/Flex";
 import Heading from "~/components/Heading";
-import RichBookIcon from "~/components/Icons/RichBookIcon";
+import ByteBookIcon from "~/components/Icons/ByteBookIcon";
 import Input from "~/components/Input";
 import LoadingIndicator from "~/components/LoadingIndicator";
 import PageTitle from "~/components/PageTitle";
@@ -251,7 +251,7 @@ function Login({ children }: Props) {
           {config.logo && !isCreate ? (
             <TeamLogo size={100} src={config.logo} />
           ) : (
-                 <RichBookIcon size={100} />
+                 <ByteBookIcon size={100} />
           )}
         </Logo>
         {isCreate ? (
