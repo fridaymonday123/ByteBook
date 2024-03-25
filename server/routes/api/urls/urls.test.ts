@@ -10,7 +10,7 @@ jest.mock("dns", () => ({
     callback: (err: Error | null, addresses: string[]) => void
   ) => {
     if (input.includes("valid.custom.domain")) {
-      callback(null, ["secure.outline.dev"]);
+      callback(null, ["secure.bytebook.ai"]);
     } else {
       callback(null, []);
     }

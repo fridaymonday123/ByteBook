@@ -220,7 +220,7 @@ export class Environment {
   public SSL_CERT = this.toOptionalString(process.env.SSL_CERT);
 
   /**
-   * The default interface language. See translate.getoutline.com for a list of
+   * The default interface language. See translate.bytebook.ai for a list of
    * available language codes and their percentage translated.
    */
   @IsIn(languages)
@@ -733,13 +733,13 @@ export class Environment {
 
   /**
    * Returns true if the current installation is the cloud hosted version at
-   * getoutline.com
+   * bytebook.ai
    */
   public get isCloudHosted() {
     return [
-      "https://app.getoutline.com",
-      "https://app.outline.dev",
-      "https://app.outline.dev:3000",
+      "https://app.bytebook.ai",
+      "https://app.bytebook.ai",
+      "https://app.bytebook.ai:3000",
     ].includes(this.URL);
   }
 

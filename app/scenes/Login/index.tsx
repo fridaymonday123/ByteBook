@@ -71,7 +71,7 @@ function Login({ children }: Props) {
       .toLowerCase()
       .trim()
       .replace(/^https?:\/\//, "");
-    const host = `https://${normalizedSubdomain}.getoutline.com`;
+    const host = `https://${normalizedSubdomain}.bytebook.ai`;
     await Desktop.bridge.addCustomHost(host);
 
     setTimeout(() => {
@@ -187,7 +187,7 @@ function Login({ children }: Props) {
               style={{ textAlign: "right" }}
               placeholder={t("subdomain")}
             >
-              <Domain>.getoutline.com</Domain>
+              <Domain>.bytebook.ai</Domain>
             </Input>
           </Flex>
           <ButtonLarge type="submit" fullwidth>

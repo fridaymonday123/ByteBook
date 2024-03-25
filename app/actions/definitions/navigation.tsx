@@ -201,7 +201,7 @@ export const downloadApp = createAction({
   icon: <BrowserIcon />,
   visible: () => !Desktop.isElectron() && isMac() && isCloudHosted,
   perform: () => {
-    window.open("https://desktop.getoutline.com");
+    window.open("https://desktop.bytebook.ai");
   },
 });
 

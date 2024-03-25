@@ -44,7 +44,7 @@ describe("#hooks.unfurl", () => {
           message_ts: randomstring.generate(12),
           links: [
             {
-              domain: "getoutline.com",
+              domain: "bytebook.ai",
               url: document.url,
             },
           ],

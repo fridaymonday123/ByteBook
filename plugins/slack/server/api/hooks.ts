@@ -44,7 +44,7 @@ function verifySlackToken(token: string) {
   }
 }
 
-// triggered by a user posting a getoutline.com link in Slack
+// triggered by a user posting a bytebook.ai link in Slack
 router.post(
   "hooks.unfurl",
   validate(T.HooksUnfurlSchema),

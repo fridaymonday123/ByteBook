@@ -8,7 +8,7 @@ import Redis from "@server/storage/redis";
 import packageInfo from "../../package.json";
 import fetch from "./fetch";
 
-const UPDATES_URL = "https://updates.getoutline.com";
+const UPDATES_URL = "https://updates.bytebook.ai";
 const UPDATES_KEY = "UPDATES_KEY";
 
 export async function checkUpdates() {
