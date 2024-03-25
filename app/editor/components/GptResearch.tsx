@@ -47,10 +47,12 @@ function GptResearch(props: Props) {
       console.log('>>>>>>>>>>>>>gpt research task', value)
       setLoaded(false)
       const research = async () => {
-        const res = await client.post(env.GTP_RESEARCH_URL, {
-          "task": value,
-          "report_type": "research_report",
-          "agent": "Auto Agent"
+          const res = await client.post(env.GTP_RESEARCH_URL, {
+              "task": value,
+              "report_type": "research_report",
+              "agent": "Auto Agent"
+          },{
+              retry:false,  
         });
         return res;
       };
