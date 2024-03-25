@@ -4,7 +4,7 @@
 <p align="center">
   <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out ByteBook using our hosted version at <a href="https://www.bytebook.ai">www.bytebook.ai/a>.</i>
   <br/>
-  <img width="1640" alt="screenshot" src="https://user-images.githubusercontent.com/380914/110356468-26374600-7fef-11eb-9f6a-f2cc2c8c6590.png">
+  <img width="1640" alt="screenshot" src="/images/ridingcat.jpg">
 </p>
 <p align="center">
   <a href="https://circleci.com/gh/outline/outline" rel="nofollow"><img src="https://circleci.com/gh/outline/outline.svg?style=shield"></a>
