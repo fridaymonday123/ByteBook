@@ -2,7 +2,7 @@
   <img src="/images/ridingcat.jpg" height="59" />
 </p>
 <p align="center">
-  <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out ByteBook using our hosted version at <a href="https://www.bytebook.ai">www.bytebook.ai/a>.</i>
+  <i>A fast, collaborative, knowledge base for your team built using React and Node.js.<br/>Try out ByteBook using our hosted version at <a href="https://www.bytebook.ai">www.bytebook.ai></a>.</i>
   <br/>
   <img width="1640" alt="screenshot" src="https://user-images.githubusercontent.com/380914/110356468-26374600-7fef-11eb-9f6a-f2cc2c8c6590.png">
 </p>
@@ -14,7 +14,7 @@
   <a href="https://translate.bytebook.ai/project/bytebook" alt="Localized"><img src="https://badges.crowdin.net/outline/localized.svg"></a>
 </p>
 
-This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use ByteBook then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using Outline in [our guide](https://docs.bytebook.ai/s/guide).
+This is the source code that runs [**ByteBook**](https://www.bytebook.ai) and all the associated services. If you want to use ByteBook then you don't need to run this code, we offer a hosted version of the app at [bytebook.ai](https://www.bytebook.ai). You can also find documentation on using ByteBook in [our guide](https://docs.bytebook.ai/s/guide).
 
 If you'd like to run your own copy of ByteBook or contribute to development then this is the place for you.
 
@@ -30,11 +30,11 @@ There is a short guide for [setting up a development environment](https://docs.b
 
 ## Contributing
 
-Outline is built and maintained by a small team – we'd love your help to fix bugs and add features!
+ByteBook is built and maintained by a small team – we'd love your help to fix bugs and add features!
 
 Before submitting a pull request _please_ discuss with the core team by creating or commenting in an issue on [GitHub](https://www.github.com/fridaymonday123/ByteBook/issues) – we'd also love to hear from you in the [discussions](https://www.github.com/fridaymonday123/ByteBook/discussions). This way we can ensure that an approach is agreed on before code is written. This will result in a much higher liklihood of your code being accepted.
 
-If you’re looking for ways to get started, here's a list of ways to help us improve Outline:
+If you’re looking for ways to get started, here's a list of ways to help us improve ByteBook:
 
 - [Translation](docs/TRANSLATION.md) into other languages
 - Issues with [`good first issue`](https://github.com/fridaymonday123/ByteBook/labels/good%20first%20issue) label
@@ -44,7 +44,7 @@ If you’re looking for ways to get started, here's a list of ways to help us im
 
 ## Architecture
 
-If you're interested in contributing or learning more about the Outline codebase
+If you're interested in contributing or learning more about the ByteBook codebase
 please refer to the [architecture document](docs/ARCHITECTURE.md) first for a high level overview of how the application is put together.
 
 ## Debugging
@@ -102,4 +102,4 @@ yarn sequelize db:migrate --env test
 
 # License
 
-Outline is [BSL 1.1 licensed](LICENSE).
+ByteBook is [BSL 1.1 licensed](LICENSE).
