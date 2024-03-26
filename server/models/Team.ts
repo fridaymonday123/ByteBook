@@ -296,7 +296,7 @@ class Team extends ParanoidModel<
         "Integrations & API",
         "Our Editor",
         "Getting Started",
-        "What is Outline",
+        "What is ByteBook",
       ];
 
       for (const title of onboardingDocs) {

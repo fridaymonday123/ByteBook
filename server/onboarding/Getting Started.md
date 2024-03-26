@@ -1,8 +1,8 @@
-Some ideas to get you and your team started with learning the basics of Outline, feel free to check them off as you go!
+Some ideas to get you and your team started with learning the basics of ByteBook, feel free to check them off as you go!
 
 ## Learn the basics
 
-- [x] Create an Outline account
+- [x] Create an ByteBook account
 - [ ] **Create a collection** from the left sidebar
 - [ ] **Create a new doc** from the top right of home or any collection
 - [ ] Try drag and drop to nest and move documents
