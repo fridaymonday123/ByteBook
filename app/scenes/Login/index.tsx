@@ -15,7 +15,7 @@ import ChangeLanguage from "~/components/ChangeLanguage";
 import Fade from "~/components/Fade";
 import Flex from "~/components/Flex";
 import Heading from "~/components/Heading";
-import ByteBookIcon from "~/components/Icons/ByteBookIcon";
+import RichBookIcon from "~/components/Icons/RichBookIcon";
 import Input from "~/components/Input";
 import LoadingIndicator from "~/components/LoadingIndicator";
 import PageTitle from "~/components/PageTitle";
@@ -71,7 +71,7 @@ function Login({ children }: Props) {
       .toLowerCase()
       .trim()
       .replace(/^https?:\/\//, "");
-    const host = `https://${normalizedSubdomain}.bytebook.ai`;
+    const host = `https://${normalizedSubdomain}.getoutline.com`;
     await Desktop.bridge.addCustomHost(host);
 
     setTimeout(() => {
@@ -187,7 +187,7 @@ function Login({ children }: Props) {
               style={{ textAlign: "right" }}
               placeholder={t("subdomain")}
             >
-              <Domain>.bytebook.ai</Domain>
+              <Domain>.getoutline.com</Domain>
             </Input>
           </Flex>
           <ButtonLarge type="submit" fullwidth>
@@ -251,7 +251,7 @@ function Login({ children }: Props) {
           {config.logo && !isCreate ? (
             <TeamLogo size={100} src={config.logo} />
           ) : (
-                 <ByteBookIcon size={100} />
+                 <RichBookIcon size={100} />
           )}
         </Logo>
         {isCreate ? (

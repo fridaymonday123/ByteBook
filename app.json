@@ -1,7 +1,7 @@
 {
   "name": "Outline",
   "description": "Open source wiki and knowledge base for growing teams",
-  "website": "https://www.bytebook.ai/",
+  "website": "https://www.getoutline.com/",
   "repository": "https://github.com/outline/outline",
   "keywords": ["wiki", "team", "node", "markdown", "slack"],
   "success_url": "/",
@@ -203,7 +203,7 @@
     },
     "DEFAULT_LANGUAGE": {
       "value": "en_US",
-      "description": "The default interface language. See translate.bytebook.ai for a list of available language codes and their rough percentage translated.",
+      "description": "The default interface language. See translate.getoutline.com for a list of available language codes and their rough percentage translated.",
       "required": false
     }
   }
