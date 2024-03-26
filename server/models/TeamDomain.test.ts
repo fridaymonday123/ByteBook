@@ -8,11 +8,11 @@ describe("team domain model", () => {
       const user = await buildAdmin({ teamId: team.id });
       const domain = await TeamDomain.create({
         teamId: team.id,
-        name: "bytebook.ai",
+        name: "getoutline.com",
         createdById: user.id,
       });
 
-      expect(domain.name).toEqual("bytebook.ai");
+      expect(domain.name).toEqual("getoutline.com");
     });
 
     it("should not allow junk domains", async () => {
