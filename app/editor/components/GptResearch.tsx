@@ -146,7 +146,7 @@ function GptResearch(props: Props) {
       <Flex align="center">
         <Img src="/images/gpt-research.png" alt="gpt-research" />
         {loaded ? (<Flex align="center" style={{ width: '100%' }}><GptInput
-          placeholder="Ask GptResearch to write anything..."
+          placeholder="Ask ByteBook AI Assistant to write anything..."
           onKeyDown={handleLinkInputKeydown}
           autoFocus
         />
