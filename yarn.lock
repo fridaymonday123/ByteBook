@@ -14228,7 +14228,7 @@ __metadata:
     react-dom: "npm:^17.0.2"
     react-dropzone: "npm:^11.7.1"
     react-helmet-async: "npm:^2.0.1"
-    react-hook-form: "npm:^7.41.5"
+    react-hook-form: "npm:^7.53.1"
     react-i18next: "npm:^12.3.1"
     react-merge-refs: "npm:^2.0.2"
     react-portal: "npm:^4.2.2"
@@ -15577,12 +15577,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hook-form@npm:^7.41.5":
-  version: 7.41.5
-  resolution: "react-hook-form@npm:7.41.5"
+"react-hook-form@npm:^7.53.1":
+  version: 7.53.1
+  resolution: "react-hook-form@npm:7.53.1"
   peerDependencies:
-    react: ^16.8.0 || ^17 || ^18
-  checksum: 10c0/978e3ba90cdcc194aafbdc1ffdb182a00604bcd51d2818f49d12685bc65ab25382850f6ae708e0284e8b5c97197b2b4e1ae76b132fee27a67c8623c41e6dab2f
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  checksum: 10c0/dd2466359a633f873755b366d367d51ab17100566b687fb3b098f704232bc6ab1c79d29f879151e492880ca5eeac35e9425fbe5a309e2a55f7a4b5baf7826e8d
   languageName: node
   linkType: hard
 
